@@ -1,0 +1,20 @@
+---
+import { giscusConfig } from "../../config";
+
+interface Props {
+    class?: string;
+}
+
+const className = Astro.props.class;
+---
+
+{giscusConfig.enable && (
+    <div id="giscus-container" class:list={[className, "w-full"]}>
+        <div class="giscus"></div>
+    </div>
+)}
+
+<script>
+    import { loadGiscus } from "../../utils/giscus-utils";
+    loadGiscus();
+</script>
