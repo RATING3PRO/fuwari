@@ -1,6 +1,6 @@
 ---
 title: 示例文章
-published: 2024-07-31
+published: 2025-08-31
 description: "这是一篇示例文章，展示了Fuwari博客的基本功能。"
 image: "./cover.jpg"
 tags: ["示例", "博客"]
