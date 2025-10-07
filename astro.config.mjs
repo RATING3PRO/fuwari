@@ -31,7 +31,11 @@ export default defineConfig({
 	base: "/",
 	trailingSlash: "always",
 	output: "static",
-	adapter: vercel(),
+	adapter: vercel({
+		webAnalytics: {
+			enabled: true,
+		},
+	}),
 	integrations: [
 		tailwind({
 			nesting: true,

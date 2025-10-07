@@ -5,6 +5,8 @@
 <script>
   import { injectSpeedInsights } from '@vercel/speed-insights';
   
-  // Initialize Vercel Speed Insights
-  injectSpeedInsights();
+  // Only inject in production
+  if (import.meta.env.PROD) {
+    injectSpeedInsights();
+  }
 </script>
