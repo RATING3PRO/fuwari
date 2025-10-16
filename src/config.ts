@@ -8,8 +8,8 @@ import type {
 import { LinkPreset } from "./types/config";
 
 export const siteConfig: SiteConfig = {
-	title: "Rt3box Blog",
-	subtitle: "演示站点",
+	title: "RATING3PRO Blog",
+	subtitle: "",
 	lang: "zh_cn", // Language code, e.g. 'en', 'zh_CN', 'ja', etc.
 	themeColor: {
 		hue: 250, // Default hue for the theme color, from 0 to 360. e.g. red: 0, teal: 200, cyan: 250, pink: 345
@@ -61,12 +61,27 @@ export const profileConfig: ProfileConfig = {
 		{
 			name: "Steam",
 			icon: "fa6-brands:steam",
-			url: "https://steamcommunity.com/id/Hystseria2/",
+			url: "https://steamcommunity.com/id/rating3pro/",
 		},
 		{
 			name: "GitHub",
 			icon: "fa6-brands:github",
 			url: "https://github.com/RATING3PRO",
+		},
+		{
+			name: "Telegram",
+			icon: "fa6-brands:telegram",
+			url: "https://t.me/Exeluck",
+		},
+		{
+			name: "QQ",
+			icon: "fa6-brands:qq",
+			url: "https://qm.qq.com/q/JSR8FO5fwI",
+		},
+		{
+			name: "WeChat",
+			icon: "fa6-brands:weixin",
+			url: "https://u.wechat.com/EMGUyhWS2pITJyJoQMsj-9A?s=2",
 		},
 	],
 };
