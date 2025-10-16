@@ -55,7 +55,8 @@ services:
       - PUID=0
       - PGID=0
       - UMASK=022
-    restart: unless-stopped ```
+    restart: unless-stopped 
+```
 
 使用Docker-Cli：
 ```bash 
