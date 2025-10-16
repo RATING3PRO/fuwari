@@ -104,13 +104,13 @@ onMount(() => {
 		);
 		initializeSearch();
 	} else {
-		document.addEventListener("pagefindready", () => {
-			console.log("Pagefind ready event received.");
+		document.addEventListener("pagefind:loaded", () => {
+			console.log("Pagefind loaded event received.");
 			initializeSearch();
 		});
-		document.addEventListener("pagefindloaderror", () => {
+		document.addEventListener("pagefind:error", () => {
 			console.warn(
-				"Pagefind load error event received. Search functionality will be limited.",
+				"Pagefind error event received. Search functionality will be limited.",
 			);
 			initializeSearch(); // Initialize with pagefindLoaded as false
 		});
