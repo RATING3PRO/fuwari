@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "9c05c473168dc888",
+        "id": "4407ad9af3cd13aa",
         "type": "tabs",
         "children": [
           {
-            "id": "c637dd409865ae01",
+            "id": "848af627c311842c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/content/posts/example-post/index.md",
+                "file": "src/content/posts/cloudflarer2alist/index.md",
                 "mode": "source",
                 "source": false
               },
@@ -169,10 +169,22 @@
       "bases:创建新数据库": false
     }
   },
-  "active": "c637dd409865ae01",
+  "active": "848af627c311842c",
   "lastOpenFiles": [
-    "src/content/posts/example-post/cover.jpg",
     "src/content/posts/example-post/index.md",
+    "src/content/posts/cloudflarer2alist/index.md",
+    "src/content/posts/cloudflarer2alist/index-9.png",
+    "src/content/posts/cloudflarer2alist/index-8.png",
+    "src/content/posts/cloudflarer2alist/index-7.png",
+    "src/content/posts/cloudflarer2alist/index-6.png",
+    "src/content/posts/cloudflarer2alist/index-5.png",
+    "src/content/posts/cloudflarer2alist/index.png",
+    "dash.cloudflare.com.md",
+    "src/content/posts/cloudflarer2alist/index-4.png",
+    "src/content/posts/cloudflarer2alist/index-3.png",
+    "src/content/posts/cloudflarer2alist/index-4.png",
+    "src/content/posts/cloudflarer2alist/index-3.png",
+    "src/content/posts/cloudflarer2alist",
     "dist/pagefind/pagefind-ui.js",
     "dist/pagefind/pagefind.js",
     "dist/pagefind/pagefind-highlight.js",
@@ -181,17 +193,6 @@
     "dist/pagefind/fragment/zh-cn_5b30d3e.pf_fragment",
     "dist/pagefind/fragment/zh-cn_4e79509.pf_fragment",
     "dist/pagefind/fragment",
-    "dist/pagefind/pagefind.zh-cn_20cec1601b3ed.pf_meta",
-    "dist/rss.xml",
-    "dist/pay/虚拟货币收款.jpg",
-    "dist/pay/支付宝收款.jpg",
-    "dist/pay/微信收款.png",
-    "dist/images/avatar.jpg",
-    "dist/favicon/rt3box-favicon.jpg",
-    "dist/favicon/favicon-light-32.png",
-    "dist/favicon/favicon-light-192.png",
-    "dist/favicon/favicon-light-180.png",
-    "dist/favicon/favicon-light-128.png",
-    "dist/favicon/favicon-dark-32.png"
+    "dist/pagefind/pagefind.zh-cn_20cec1601b3ed.pf_meta"
   ]
 }

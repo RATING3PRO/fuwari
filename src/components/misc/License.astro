@@ -12,12 +12,12 @@ interface Props {
 	class: string;
 }
 
-const { title, pubDate } = Astro.props;
+const { title, slug, pubDate } = Astro.props;
 const className = Astro.props.class;
 const profileConf = profileConfig;
 const licenseConf = licenseConfig;
-// 使用指定的链接而不是当前URL
-const postUrl = "xie.today/posts/example-post/";
+// 使用动态生成的URL
+const postUrl = `${Astro.site?.origin || 'https://xie.today'}/posts/${slug}/`;
 ---
 <div class={`relative transition overflow-hidden bg-[var(--license-block-bg)] py-5 px-6 ${className}`}>
     <div class="transition font-bold text-black/75 dark:text-white/75">

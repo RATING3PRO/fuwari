@@ -1,9 +1,11 @@
 ---
 title: 示例文章
 published: 2025-08-31
-description: "这是一篇示例文章，展示了Fuwari博客的基本功能。"
-image: "./cover.jpg"
-tags: ["示例", "博客"]
+description: 这是一篇示例文章，展示了Fuwari博客的基本功能。
+image: ./index.png
+tags:
+  - 示例
+  - 博客
 category: 示例分类
 draft: false
 ---
@@ -62,7 +64,7 @@ console.log(greet('World'));
 
 下面是文章的封面图片：
 
-![封面图片](./cover.jpg)
+![](src/content/posts/example-post/index.png)
 
 ## 表格
 
