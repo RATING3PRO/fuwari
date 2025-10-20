@@ -68,6 +68,16 @@ export const navBarConfig: NavBarConfig = {
 		LinkPreset.Archive,
 		LinkPreset.About,
 		LinkPreset.Donation,
+		{
+			name: "友链",
+			url: "/friends/",
+			external: false,
+		},
+		{
+			name: "状态页",
+			url: "https://status.xie.today",
+			external: true,
+		},
 	],
 };
 
