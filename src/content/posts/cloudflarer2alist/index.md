@@ -17,9 +17,9 @@ category: Cloudflare
 打开[Cloudflare面板](https://dash.cloudflare.com)，左侧栏向下滚动，找到R2对象存储并点击创建
 
 
-![](index-1.png)
+![](src/content/posts/cloudflarer2alist/index-1.png)
 
-![](index-2.png)
+![](src/content/posts/cloudflarer2alist/index-2.png)
 
 名称随便设置，位置建议选择距离物理位置较近的区域提升速度
 
@@ -27,11 +27,11 @@ category: Cloudflare
 
 点击图一右上角管理API令牌并创建AccountAPI令牌
 
-![](index-3.png)
+![](src/content/posts/cloudflarer2alist/index-3.png)
 
 按照图示，名称随便填，权限选择对象读和写，指定需要管理的存储桶，其余保持不变
 
-![](index-4.png)
+![](src/content/posts/cloudflarer2alist/index-4.png)
 
 创建后会出现几项值，请妥善保存，将不会再展示
 
@@ -39,7 +39,7 @@ category: Cloudflare
 
 打开[Alist文档安装页](https://alistgo.com/zh/guide/install/)查看适合你的安装方法，本文介绍使用Docker安装到本地Linux主机或家用NAS上
 
-![](index-5.png)
+![](src/content/posts/cloudflarer2alist/index-5.png)
 使用docker-compose.yml：
 ```yaml 
 version: '3.3'

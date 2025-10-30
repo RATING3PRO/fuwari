@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/content/posts/cloudflarer2alist/index.md",
+                "file": "src/content/posts/torsocks5/index.md",
                 "mode": "source",
                 "source": false
               },
@@ -171,8 +171,18 @@
   },
   "active": "848af627c311842c",
   "lastOpenFiles": [
-    "src/content/posts/cloudflarer2alist/index.png",
+    "src/content/posts/torsocks5/index-5.png",
+    "src/content/posts/torsocks5/index-4.png",
+    "src/content/posts/torsocks5/index-3.png",
+    "src/content/posts/torsocks5/index-2.png",
+    "src/content/posts/torsocks5/index-1.png",
+    "src/content/posts/example-post/index.md",
+    "src/content/posts/example-post/cover.jpg",
+    "src/content/posts/torsocks5/index.md",
+    "src/content/posts/torsocks5/index.png",
     "src/content/posts/cloudflarer2alist/index.md",
+    "src/content/posts/cloudflarer2alist/index.png",
+    "src/content/posts/torsocks5",
     "dist/pagefind/fragment/zh-cn_4277a0d.pf_fragment",
     "dist/pagefind/fragment/zh-cn_3ec4daf.pf_fragment",
     "dist/pagefind/fragment/zh-cn_5c9053f.pf_fragment",
@@ -182,18 +192,9 @@
     "dist/pagefind/pagefind-modular-ui.js",
     "dist/pagefind/pagefind-ui.css",
     "dist/pagefind/pagefind-modular-ui.css",
-    "dist/pagefind/pagefind-ui.js",
     "dist/_astro/index.CCjTNoVE_1I9Bwb.webp",
     "dist/_astro/index-9.Blm-PjER_ZKHJ1A.webp",
     "dist/_astro/index.B_WtmH9q_g0hG6.webp",
-    "dist/_astro/index-8.BlAxBMUQ_Z1LDdEp.webp",
-    "dist/_astro/index-7.DV1suqyO_2m9mEh.webp",
-    "dist/_astro/index-6.DnBex5ba_uDceR.webp",
-    "dist/_astro/index-5.qrHfcwIF_Z2pg24V.webp",
-    "dist/_astro/index-4.D43tkcmY_2ndYVJ.webp",
-    "dist/_astro/index-3.D25tuVjc_ZWX0db.webp",
-    "dist/_astro/index-1.CAQCijYH_PsVmS.webp",
-    "src/content/posts/example-post/index.md",
     "dash.cloudflare.com.md"
   ]
 }
