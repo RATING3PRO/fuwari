@@ -78,6 +78,11 @@ export const navBarConfig: NavBarConfig = {
 			url: "https://status.xie.today",
 			external: true,
 		},
+		{
+			name: "探针",
+			url: "https://koenv.xie.today",
+			external: true,
+		},
 	],
 };
 
