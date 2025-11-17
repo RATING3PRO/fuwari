@@ -75,7 +75,7 @@ export const navBarConfig: NavBarConfig = {
 		},
 		{
 			name: "状态页",
-			url: "https://status.xie.today",
+			url: "https://stats.uptimerobot.com/AcTZsUozQm",
 			external: true,
 		},
 		{
