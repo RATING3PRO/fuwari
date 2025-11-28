@@ -27,12 +27,12 @@ draft: false
 
 ![](src/content/posts/torsocks5/index-3.png)
 
-# 开放向所有源IP地址的Tor Socks5服务
+# 开放向内网网段所有源IP地址的Tor Socks5服务
 
-关闭浏览器，打开安装目录：\Tor Browser\Browser\TorBrowser\Data\Tor 找到torrc文件，使用文本编辑器打开，在UseBridges 1的上方一行写入：
+关闭浏览器，打开安装目录：\Tor Browser\Browser\TorBrowser\Data\Tor 找到torrc文件，使用文本编辑器打开，在UseBridges 1的上方一行写入，将192.168.1.0替换为自己网络网段
 
 ``` bash
-SocksPort 0.0.0.0:9060
+SocksPort 192.168.1.0:9060
 ```
 
 ![](src/content/posts/torsocks5/index-4.png)
@@ -56,4 +56,4 @@ SocksPort 0.0.0.0:9060
 
 # 注意事项
 
-本文操作会将所有源IP都运行不经过鉴权访问该服务，请注意是否符合当地法律和安全性问题，如需鉴权，可尝试3proxy程序。
+本文操作会将所有可访问内网的源IP都运行不经过鉴权访问该服务，请注意是否符合当地法律和安全性问题，如需鉴权，可尝试3proxy程序。
