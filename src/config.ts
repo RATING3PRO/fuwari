@@ -80,7 +80,7 @@ export const navBarConfig: NavBarConfig = {
 		},
 		{
 			name: "探针",
-			url: "https://vpsstatus.xie.today",
+			url: "https://koenv.xie.today",
 			external: true,
 		},
 	],
