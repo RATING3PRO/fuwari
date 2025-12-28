@@ -52,6 +52,10 @@ export const siteConfig: SiteConfig = {
 				name: "镜像站Netlify",
 				url: "https://nlcdnblog.xie.today",
 			},
+			{
+				name: "镜像站ESA",
+				url: "https://accdnblog.xie.today",
+			},
 		],
 	},
 	favicon: [
