@@ -12,7 +12,7 @@ draft: false
 ---
 # 获取Tor浏览器
 
-常规方法可直接访问[Tor浏览器官网](https://www.torproject.org/download/)下载。但可能无法直接连接，我们可以向 gettor@torproject.org 发送邮件，主题和内容均为Help，按照回信回复系统类型，最后会发送包含验证GPG签名的安装包附件。请勿相信其他源提供的安装包。
+常规方法可直接访问[Tor浏览器官网](https://www.torproject.org/download/)下载。但可能无法直接连接，我们可以向 gettor@torproject.org 发送邮件，主题和内容均为Help，按照回信回复系统类型，最后会发送包含验证GPG签名的安装包附件。请勿相信其他第三方源提供的安装包。
 
 ![](src/content/posts/torsocks5/index-1.png)
 # 安装并启动Tor浏览器

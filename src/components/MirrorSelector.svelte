@@ -1,7 +1,7 @@
 <script lang="ts">
-import { siteConfig } from "@/config";
 import Icon from "@iconify/svelte";
 import { onMount } from "svelte";
+import { siteConfig } from "@/config";
 
 let showPanel = false;
 
@@ -10,55 +10,55 @@ let latencies: Record<string, number | null> = {};
 let testing = false;
 
 function togglePanel() {
-    showPanel = !showPanel;
-    if (showPanel) {
-        // 面板展开时触发一次测速
-        testAllMirrors();
-    }
+	showPanel = !showPanel;
+	if (showPanel) {
+		// 面板展开时触发一次测速
+		testAllMirrors();
+	}
 }
 
 function hidePanel() {
-    showPanel = false;
+	showPanel = false;
 }
 
 function switchMirror(url: string) {
-    window.location.href = url + window.location.pathname;
+	window.location.href = url + window.location.pathname;
 }
 
 // 使用图片加载时间进行跨域测速（不读取内容，仅测网络耗时）
 function testLatency(url: string): Promise<number> {
-    return new Promise((resolve) => {
-        const start = performance.now();
-        const img = new Image();
-        // 选择一个稳定存在的资源路径，并加入随机参数避免缓存
-        img.src = `${url}/favicon/rt3box-favicon.jpg?ping=${Date.now()}${Math.random()}`;
-        const done = () => resolve(Math.round(performance.now() - start));
-        img.onload = done;
-        img.onerror = done; // 即便加载失败也返回耗时，用于对比网络延迟
-    });
+	return new Promise((resolve) => {
+		const start = performance.now();
+		const img = new Image();
+		// 选择一个稳定存在的资源路径，并加入随机参数避免缓存
+		img.src = `${url}/favicon/rt3box-favicon.jpg?ping=${Date.now()}${Math.random()}`;
+		const done = () => resolve(Math.round(performance.now() - start));
+		img.onload = done;
+		img.onerror = done; // 即便加载失败也返回耗时，用于对比网络延迟
+	});
 }
 
 async function testAllMirrors() {
-    if (!siteConfig.mirrors?.sites?.length) return;
-    testing = true;
-    latencies = {};
-    await Promise.all(
-        siteConfig.mirrors.sites.map(async (site) => {
-            try {
-                const ms = await testLatency(site.url);
-                latencies[site.url] = ms;
-            } catch (e) {
-                latencies[site.url] = null;
-            }
-        })
-    );
-    testing = false;
+	if (!siteConfig.mirrors?.sites?.length) return;
+	testing = true;
+	latencies = {};
+	await Promise.all(
+		siteConfig.mirrors.sites.map(async (site) => {
+			try {
+				const ms = await testLatency(site.url);
+				latencies[site.url] = ms;
+			} catch (e) {
+				latencies[site.url] = null;
+			}
+		}),
+	);
+	testing = false;
 }
 
 onMount(() => {
-    // 可选：页面初次加载时也进行一次后台测速
-    // 避免影响首屏交互，不展开面板也可预热数据
-    testAllMirrors();
+	// 可选：页面初次加载时也进行一次后台测速
+	// 避免影响首屏交互，不展开面板也可预热数据
+	testAllMirrors();
 });
 </script>
 

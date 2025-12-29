@@ -29,6 +29,6 @@
 
 如有任何问题、建议或合作意向，欢迎通过以下方式联系我：
 
-- 电子邮件：[xiesmail2000@gmail.com](mailto:xiesmail2000@gmail.com)
+- 电子邮件：[me@xie.today](mailto:me@xie.today)
 - 社交媒体：[Twitter](https://x.com/RATING3PRO) | [GitHub](https://github.com/RATING3PRO)
 
