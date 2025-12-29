@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "848af627c311842c",
+            "id": "d740b2e2a6d924c0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/content/posts/torsocks5/index.md",
+                "file": "src/content/posts/homelab-1/index.md",
                 "mode": "source",
                 "source": false
               },
@@ -22,7 +22,7 @@
             }
           },
           {
-            "id": "2f9c6756c3f20079",
+            "id": "6cc2013dacea1f17",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -35,8 +35,7 @@
               "title": "index"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -184,8 +183,15 @@
       "bases:创建新数据库": false
     }
   },
-  "active": "2f9c6756c3f20079",
+  "active": "d740b2e2a6d924c0",
   "lastOpenFiles": [
+    "src/content/posts/cloudflarer2alist/index.md",
+    "src/content/posts/homelab-1/index.md",
+    "src/content/posts/homelab-1/index.jpg",
+    "src/content/posts/example-post/index.md",
+    "src/content/posts/example-post/cover.jpg",
+    "src/content/posts/torsocks5/index.md",
+    "src/content/posts/homelab-1",
     "src/content/posts/cloudflarer2alist/index.png",
     "src/content/posts/cloudflarer2alist/index-1.png",
     "README.md",
@@ -194,11 +200,6 @@
     "src/content/posts/torsocks5/index-3.png",
     "src/content/posts/torsocks5/index-2.png",
     "src/content/posts/torsocks5/index-1.png",
-    "src/content/posts/example-post/index.md",
-    "src/content/posts/example-post/cover.jpg",
-    "src/content/posts/torsocks5/index.md",
-    "src/content/posts/torsocks5/index.png",
-    "src/content/posts/cloudflarer2alist/index.md",
     "src/content/posts/torsocks5",
     "dist/pagefind/fragment/zh-cn_4277a0d.pf_fragment",
     "dist/pagefind/fragment/zh-cn_3ec4daf.pf_fragment",
@@ -208,9 +209,6 @@
     "dist/pagefind/wasm.unknown.pagefind",
     "dist/pagefind/pagefind-modular-ui.js",
     "dist/pagefind/pagefind-ui.css",
-    "dist/pagefind/pagefind-modular-ui.css",
-    "dist/_astro/index.CCjTNoVE_1I9Bwb.webp",
-    "dist/_astro/index-9.Blm-PjER_ZKHJ1A.webp",
     "dash.cloudflare.com.md"
   ]
 }
