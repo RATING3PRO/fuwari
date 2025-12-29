@@ -43,21 +43,32 @@ category: Homelab
 ## PowerEdge R730xd
 
 CPU：双路Intel Xeon CPU E5-2680 v4
+
 RAM：Hynix DDR4 2133 16GB x4 共64GB
+
 RAID Card：PERC H730 Mini (嵌入式)
-Network：Intel 82599 10 Gigabit Dual Port Network Connection、Intel(R) 2P X540/2P I350 rNDC
+
+Network：Intel 82599 10 Gigabit Dual Port Network Connection、Intel(R) 2P 
+X540/2P I350 rNDC
+
 Power：Dell PowerEdge 750W PSU x2
+
 
 ## SA5212M4
 
 CPU：双路Intel Xeon CPU E5-2680 v4
+
 RAM：Hynix DDR4 2133MHz 16GB x4 共64GB
+
 Network：Intel I350 Gigabit Network Connection x2
+
 
 ## DXP4800
 
 RAM：Samsung M425R1GB4BB0-CQKOL 8GB 4800MHz
+
 Disk：WesternDigital WDC WD40EFPX-68C6CNO 4TB x4
+
 
 
 # 软件服务
