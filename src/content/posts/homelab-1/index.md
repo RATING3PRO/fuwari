@@ -5,10 +5,11 @@ tags:
   - Openwrt
   - ProxmoxVE
   - ESXi
+  - NAS
 published: 2025-12-30
 image: ./index.jpg
 description: 介绍我的Homelab软硬件设施
-title: 介绍我的Homelab
+title: 介绍我的Homelab（可能持续更新）
 draft: false
 category: Homelab
 ---
@@ -83,8 +84,6 @@ Disk：WesternDigital WDC WD40EFPX-68C6CNO 4TB x4
 - [qBittorrent](https://www.qbittorrent.org/)BT客户端，搭配PeerBanHelper使用
 - [iventoy](https://www.iventoy.com/)PXE服务器
 - [dani-garcia/vaultwarden](https://github.com/dani-garcia/vaultwarden)Bitwarden的替代服务器，支持Bitwarden官方客户端
-- [gdy666/lucky](https://github.com/gdy666/lucky)网络服务工具，支持DDNS、STUN、Web服务等功能
-
 ### 宿主机服务
 
 Tailscale服务端：开启尾网和出口节点，搭配软路由静态路由表，自建DERP服务器，实现远程访问内网和使用家庭网络出口代理等功能
@@ -114,6 +113,10 @@ Debian虚拟机从OpenClash排除代理，运行：
 
 - [cmliu/CFnat-Docker](https://github.com/cmliu/CFnat-Docker)优选CloudflareIP并转发指定CDN端口到本地
 - [XIU2/CloudflareSpeedTest](https://github.com/XIU2/CloudflareSpeedTest)优选CloudflareIP并搭配shell脚本写入域名
+- [AlistGo/alist](https://github.com/AlistGo/alist)挂载本地磁盘WebDAV服务
+- [gdy666/lucky](https://github.com/gdy666/lucky)网络服务工具，支持DDNS、STUN、Web服务等功能
+- [cloudflare/cloudflared](https://github.com/cloudflare/cloudflared)运行在lucky中的cloudflaretunnel服务
+- [ipfs/ipfs-webui](https://github.com/ipfs/ipfs-webui)基于[ipfs/kubo](https://github.com/ipfs/kubo)的IPFS节点管理面板
 
 ### WindowsServer
 
@@ -122,6 +125,6 @@ Debian虚拟机从OpenClash排除代理，运行：
 
 # 网络环境
 
-运营商是中国移动，光猫桥接，CGNAT双向NAT1，IPv6 /60前缀
+运营商是中国移动，千兆下行百兆上行，光猫桥接，CGNAT双向NAT1，IPv6 /60前缀
 
 # 最后祝大家元旦快乐x
