@@ -109,7 +109,7 @@ const jsonLd = {
 
             {licenseConfig.enable && <License title={entry.data.title} slug={entry.slug} pubDate={entry.data.published} class="mb-6 rounded-xl license-container onload-animation"></License>}
 
-            <div class="mb-4 onload-animation">
+            <div id="comments" class="mb-4 onload-animation">
                 <h2 class="text-2xl font-bold mb-4">{i18n(I18nKey.comments)}</h2>
                 <Giscus class="mb-2" />
             </div>

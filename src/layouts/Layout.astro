@@ -476,6 +476,7 @@ if (window?.swup?.hooks) {
 }
 
 let backToTopBtn = document.getElementById('back-to-top-btn');
+let goToCommentsBtn = document.getElementById('go-to-comments-btn');
 let toc = document.getElementById('toc-wrapper');
 let navbar = document.getElementById('navbar-wrapper')
 function scrollFunction() {
@@ -488,6 +489,15 @@ function scrollFunction() {
 			backToTopBtn.classList.add('hide')
 		}
 	}
+
+    if (goToCommentsBtn) {
+        const comments = document.getElementById('comments');
+        if (comments && (document.body.scrollTop > bannerHeight || document.documentElement.scrollTop > bannerHeight)) {
+            goToCommentsBtn.classList.remove('hide')
+        } else {
+            goToCommentsBtn.classList.add('hide')
+        }
+    }
 
 	if (bannerEnabled && toc) {
 		if (document.body.scrollTop > bannerHeight || document.documentElement.scrollTop > bannerHeight) {
