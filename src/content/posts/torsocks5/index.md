@@ -37,7 +37,7 @@ SocksPort 192.168.1.150:9060
 
 ![](src/content/posts/torsocks5/index-4.png)
 
-再启动Tor浏览器，会自动向所有IP开放127.0.0.1:9060，我们还需要设置Windows防火墙开放9060端口：
+再启动Tor浏览器，会自动向所有同网段IP开放本机9060端口，我们还需要设置Windows防火墙开放9060端口：
 
 打开高级安全Windows Defender防火墙，新建入站规则：
 
@@ -52,8 +52,8 @@ SocksPort 192.168.1.150:9060
 | 何时应用该规则?               | 全选          |
 | 名称                     | 任意          |
 
-这时可以尝试使用其他设备连接该设备的IP地址:9060尝试访问Tor网络，可以在客户端设备打开[https://check.torproject.org/api/ip](https://check.torproject.org/api/ip) 查看回应的IsTor，应为true。
+这时可以尝试使用同网段其他设备连接该设备的IP地址:9060尝试访问Tor网络，可以在客户端设备打开[https://check.torproject.org/api/ip](https://check.torproject.org/api/ip) 查看回应的IsTor，应为true。
 
 # 注意事项
 
-本文操作会将所有可访问内网的源IP都运行不经过鉴权访问该服务，请注意是否符合当地法律和安全性问题，如需鉴权，可尝试3proxy程序。
+本文操作会将所有可访问内网网段的源IP都运行不经过鉴权访问该服务，请注意是否符合当地法律和安全性问题，如需鉴权，可尝试3proxy程序。
