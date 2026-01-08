@@ -3,9 +3,9 @@ tags:
   - Tor
   - Socks5
   - 代理
-title: 在内网使用Windows开放TorBrowser Socks5代理服务
+title: 在内网使用 Windows 开放 Tor Browser 的 Socks5 代理服务
 published: 2025-10-30
-description: 将Tor Socks5代理端口向内网开放
+description: 介绍如何在 Windows 系统中使用 Tor Browser，将其 Socks5 代理端口开放给内网设备使用，适用于局域网代理与匿名访问场景。
 image: ./index.png
 category: Tor
 draft: false

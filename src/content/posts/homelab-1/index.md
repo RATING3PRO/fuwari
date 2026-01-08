@@ -8,8 +8,8 @@ tags:
   - NAS
 published: 2025-12-30
 image: ./index.jpg
-description: 介绍我的Homelab软硬件设施
-title: 介绍我的Homelab（可能持续更新）
+description: 记录并介绍我的 Homelab 软硬件架构，包括 OpenWrt、Proxmox VE、ESXi、NAS 与代理相关配置，作为持续更新的家庭实验室实践笔记。
+title: 我的 Homelab 架构记录：OpenWrt / Proxmox VE / ESXi / NAS
 draft: false
 category: Homelab
 ---
