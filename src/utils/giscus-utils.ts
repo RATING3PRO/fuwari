@@ -3,6 +3,19 @@
  */
 import { giscusConfig } from "../config";
 
+export function setGiscusTheme(theme: string) {
+	const iframe = document.querySelector(
+		"iframe.giscus-frame",
+	) as HTMLIFrameElement;
+	if (!iframe) return;
+	const message = {
+		setConfig: {
+			theme: theme,
+		},
+	};
+	iframe.contentWindow?.postMessage({ giscus: message }, "https://giscus.app");
+}
+
 export function loadGiscus() {
 	// 如果Giscus未启用，则不加载
 	if (!giscusConfig.enable) {
@@ -12,6 +25,14 @@ export function loadGiscus() {
 	// 检查是否已经加载过Giscus
 	if (document.querySelector(".giscus-frame")) {
 		return;
+	}
+
+	const currentTheme = localStorage.getItem("theme");
+	let theme = giscusConfig.theme;
+	if (currentTheme === "light") {
+		theme = "light";
+	} else if (currentTheme === "dark") {
+		theme = "dark";
 	}
 
 	// 创建Giscus脚本
@@ -26,7 +47,7 @@ export function loadGiscus() {
 	script.setAttribute("data-reactions-enabled", giscusConfig.reactionsEnabled);
 	script.setAttribute("data-emit-metadata", giscusConfig.emitMetadata);
 	script.setAttribute("data-input-position", giscusConfig.inputPosition);
-	script.setAttribute("data-theme", giscusConfig.theme);
+	script.setAttribute("data-theme", theme);
 	script.setAttribute("data-lang", giscusConfig.lang);
 	script.setAttribute("data-loading", "lazy");
 	script.setAttribute("crossorigin", "anonymous");

@@ -4,8 +4,9 @@ import {
 	DEFAULT_THEME,
 	LIGHT_MODE,
 } from "@constants/constants.ts";
-import { expressiveCodeConfig } from "@/config";
+import { expressiveCodeConfig, giscusConfig } from "@/config";
 import type { LIGHT_DARK_MODE } from "@/types/config";
+import { setGiscusTheme } from "./giscus-utils";
 
 export function getDefaultHue(): number {
 	const fallback = "250";
@@ -49,6 +50,9 @@ export function applyThemeToDocument(theme: LIGHT_DARK_MODE) {
 		"data-theme",
 		expressiveCodeConfig.theme,
 	);
+
+	// Set Giscus theme
+	setGiscusTheme(theme === AUTO_MODE ? giscusConfig.theme : theme);
 }
 
 export function setTheme(theme: LIGHT_DARK_MODE): void {
