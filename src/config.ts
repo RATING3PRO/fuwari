@@ -56,6 +56,10 @@ export const siteConfig: SiteConfig = {
 				name: "镜像站ESA",
 				url: "https://accdnblog.xie.today",
 			},
+			{
+				name: "镜像站GithubPage",
+				url: "https://ghcdnblog.xie.today",
+			},
 		],
 	},
 	favicon: [
