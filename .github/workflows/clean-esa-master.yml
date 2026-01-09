@@ -1,4 +1,4 @@
-name: Clean ESA Versions on Main
+name: Clean ESA Versions on Master
 
 on:
   push:
