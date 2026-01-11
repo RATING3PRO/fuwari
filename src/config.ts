@@ -34,7 +34,7 @@ export const siteConfig: SiteConfig = {
 		sites: [
 			{
 				name: "主站Vercel",
-				url: "https://xie.today",
+				url: "https://www.xie.today",
 			},
 			{
 				name: "镜像站Edgeone",
