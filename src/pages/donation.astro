@@ -7,13 +7,13 @@ import MainGridLayout from "../layouts/MainGridLayout.astro";
 <MainGridLayout title={i18n(I18nKey.donation)} description={i18n(I18nKey.donation)}>
     <div class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative min-h-32">
         <div class="card-base z-10 px-9 py-6 relative w-full">
-            <h1 class="text-3xl font-bold mb-6 text-center">{i18n(I18nKey.donation)}</h1>
-            <p class="text-center mb-8">如果您喜欢我的内容，可以通过以下方式支持我的创作</p>
+            <h1 class="text-3xl font-bold mb-6 text-center text-90">{i18n(I18nKey.donation)}</h1>
+            <p class="text-center mb-8 text-75">如果您喜欢我的内容，可以通过以下方式支持我的创作</p>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- 微信支付 -->
                 <div class="flex flex-col items-center">
-                    <h2 class="text-xl font-bold mb-4 flex items-center">
+                    <h2 class="text-xl font-bold mb-4 flex items-center text-90">
                         <Icon name="fa6-brands:weixin" class="text-[#07C160] mr-2" />
                         微信支付
                     </h2>
@@ -24,7 +24,7 @@ import MainGridLayout from "../layouts/MainGridLayout.astro";
                 
                 <!-- 支付宝 -->
                 <div class="flex flex-col items-center">
-                    <h2 class="text-xl font-bold mb-4 flex items-center">
+                    <h2 class="text-xl font-bold mb-4 flex items-center text-90">
                         <Icon name="fa6-brands:alipay" class="text-[#1677FF] mr-2" />
                         支付宝
                     </h2>
@@ -35,7 +35,7 @@ import MainGridLayout from "../layouts/MainGridLayout.astro";
                 
                 <!-- 虚拟货币 -->
                 <div class="flex flex-col items-center">
-                    <h2 class="text-xl font-bold mb-4 flex items-center">
+                    <h2 class="text-xl font-bold mb-4 flex items-center text-90">
                         <Icon name="fa6-brands:bitcoin" class="text-[#F7931A] mr-2" />
                         虚拟货币
                     </h2>
@@ -46,7 +46,7 @@ import MainGridLayout from "../layouts/MainGridLayout.astro";
             </div>
             
             <div class="mt-10 text-center">
-                <p class="text-sm opacity-70">感谢您的支持，这将帮助我创作更多优质内容！</p>
+                <p class="text-sm text-50">感谢您的支持，这将帮助我创作更多优质内容！</p>
             </div>
         </div>
     </div>
