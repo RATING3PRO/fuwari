@@ -95,6 +95,11 @@ export const navBarConfig: NavBarConfig = {
 			url: "https://komari.xie.today",
 			external: true,
 		},
+		{
+			name: "站点统计",
+			url: "https://umami.xie.today/share/qgTZ6Q4LDKr7VPKo",
+			external: true,
+		},
 	],
 };
 
