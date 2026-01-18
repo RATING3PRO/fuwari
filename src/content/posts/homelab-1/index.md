@@ -84,26 +84,28 @@ Disk：WesternDigital WDC WD40EFPX-68C6CNO 4TB x4
 - [qBittorrent](https://www.qbittorrent.org/)BT客户端，搭配PeerBanHelper使用
 - [iventoy](https://www.iventoy.com/)PXE服务器
 - [dani-garcia/vaultwarden](https://github.com/dani-garcia/vaultwarden)Bitwarden的替代服务器，支持Bitwarden官方客户端
+- [teamspeak3](https://github.com/TeamSpeak-Systems/teamspeak-linux-docker-images)更隐私的TS3服务器（仅内网），朋友使用Tailscale远程
+- [Umami](https://github.com/umami-software/umami)网站统计，通过cloudflared穿透
+- [louislam/uptime-kuma](https://github.com/louislam/uptime-kuma)服务监控，通过cloudflared穿透
 ### 宿主机服务
 
-Tailscale服务端：开启尾网和出口节点，搭配软路由静态路由表，自建DERP服务器，实现远程访问内网和使用家庭网络出口代理等功能
+[Tailscale](https://github.com/tailscale/tailscale)服务端：开启尾网和出口节点，搭配软路由静态路由表，自建DERP服务器，实现远程访问内网和使用家庭网络出口代理等功能
 
 ## J4125 Openwrt主路由
 
 ### Docker容器
 
-- SubConverter订阅转换后端
-- SubWeb订阅转换前端
-- SubStore订阅管理器
-- S-UI面板
+- [MetaCubeX/subconverter](https://github.com/MetaCubeX/subconverter)订阅转换后端
+- [CareyWang/sub-web](https://github.com/CareyWang/sub-web)订阅转换前端
+- [sub-store-org/Sub-Store](https://github.com/sub-store-org/Sub-Store)订阅管理器
 
 ### luci-app
 
-- PassWall2：搭建远程访问内网的VLESS节点
-- DDNS-GO：解析IPv6地址到域名，搭配VLESS节点远程访问内网
-- OpenClash：规则分流和Fake-IP实现内网全流量代理
+- [Openwrt-Passwall/openwrt-passwall2](https://github.com/Openwrt-Passwall/openwrt-passwall2)：搭建远程访问内网的VLESS节点
+- [gdy666/lucky](https://github.com/gdy666/lucky)：解析IPv6地址到域名，搭配VLESS节点远程访问内网，签发SSL/TLS证书玩点其他协议（？
+- [vernesong/OpenClash](https://github.com/vernesong/OpenClash)：规则分流和Fake-IP实现内网全流量代理
 - WireGuard 状态：显示WireGuard客户端状态，服务端搭配DDNS实现WireGuard访问内网
-- KMS Server：自动激活内网Windows设备
+- KMS Server：自动激活内网Windows设备和Windows Office
 
 ## R730xd ESXi
 
