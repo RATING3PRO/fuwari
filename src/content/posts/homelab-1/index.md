@@ -120,6 +120,11 @@ Debian虚拟机从OpenClash排除代理，运行：
 - [cloudflare/cloudflared](https://github.com/cloudflare/cloudflared)运行在lucky中的cloudflaretunnel服务
 - [ipfs/ipfs-webui](https://github.com/ipfs/ipfs-webui)基于[ipfs/kubo](https://github.com/ipfs/kubo)的IPFS节点管理面板
 
+### Ubuntu
+
+主要算力机，运行：
+- [MCSManager](https://github.com/MCSManager/MCSManager)搭建从客户端迁移存档的Minecraft1.21.10-Fabric0.17.3服务器
+
 ### WindowsServer
 
 - [Splamy/TS3AudioBot](https://github.com/Splamy/TS3AudioBot)TeamSpeak3机器人，播放音乐和Youtube视频
