@@ -20,6 +20,8 @@ let links: NavBarLink[] = navBarConfig.links.map(
 		return item;
 	},
 );
+
+const pagefindUrl = url("/pagefind/pagefind.js");
 ---
 <div id="navbar" class="z-50 onload-animation">
     <div class="absolute h-8 left-0 right-0 -top-8 bg-[var(--card-bg)] transition"></div> <!-- used for onload animation -->
@@ -100,8 +102,11 @@ function loadButtonScript() {
 loadButtonScript();
 </script>
 
-<script is:inline define:vars={{scriptUrl: '/pagefind/pagefind.js'}}>
+<script is:inline define:vars={{scriptUrl: pagefindUrl, isDev: import.meta.env.DEV}}>
 async function loadPagefind() {
+    if (isDev) {
+        return;
+    }
     try {
         // Check if script exists
         const response = await fetch(scriptUrl);
