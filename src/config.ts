@@ -33,7 +33,7 @@ export const siteConfig: SiteConfig = {
 		enable: true,
 		sites: [
 			{
-				name: "主站Vercel",
+				name: "主站Cloudflare",
 				url: "https://www.xie.today",
 			},
 			{
