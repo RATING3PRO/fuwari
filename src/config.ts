@@ -87,7 +87,7 @@ export const navBarConfig: NavBarConfig = {
 		},
 		{
 			name: "状态页",
-			url: "https://uptime-kuma.xie.today/status/rating3pro-status",
+			url: "https://kuma.xie.today/status/rating3pro-status",
 			external: true,
 		},
 		{
