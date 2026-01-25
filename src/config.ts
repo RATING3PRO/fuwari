@@ -10,7 +10,9 @@ import { LinkPreset } from "./types/config";
 export const siteConfig: SiteConfig = {
 	title: "RATING3PRO Blog",
 	subtitle: "Share life",
-	lang: "zh_cn", // Language code, e.g. 'en', 'zh_CN', 'ja', etc.
+	description:
+		"专注于 Cloudflare、中国大陆网络优化、网络代理、自托管与 Homelab 实践，记录真实配置过程、问题分析及解决方案，持续更新",
+	lang: "zh_CN", // Language code, e.g. 'en', 'zh_CN', 'ja', etc.
 	themeColor: {
 		hue: 250, // Default hue for the theme color, from 0 to 360. e.g. red: 0, teal: 200, cyan: 250, pink: 345
 		fixed: false, // Hide the theme color picker for visitors
