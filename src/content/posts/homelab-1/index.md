@@ -84,7 +84,7 @@ Disk：WesternDigital WDC WD40EFPX-68C6CNO 4TB x4
 - [qBittorrent](https://www.qbittorrent.org/)BT客户端，搭配PeerBanHelper使用
 - [iventoy](https://www.iventoy.com/)PXE服务器
 - [dani-garcia/vaultwarden](https://github.com/dani-garcia/vaultwarden)Bitwarden的替代服务器，支持Bitwarden官方客户端
-- [teamspeak3](https://github.com/TeamSpeak-Systems/teamspeak-linux-docker-images)更隐私的TS3服务器（仅内网），朋友使用Tailscale远程
+- [teamspeak3](https://github.com/TeamSpeak-Systems/teamspeak-linux-docker-images)更隐私的TS3服务器（仅内网），其他人使用Tailscale远程
 - [Umami](https://github.com/umami-software/umami)网站统计，通过cloudflared穿透
 - [louislam/uptime-kuma](https://github.com/louislam/uptime-kuma)服务监控，通过cloudflared穿透
 ### 宿主机服务
@@ -95,7 +95,7 @@ Disk：WesternDigital WDC WD40EFPX-68C6CNO 4TB x4
 
 ### Docker容器
 
-- [MetaCubeX/subconverter](https://github.com/MetaCubeX/subconverter)订阅转换后端
+- [MetaCubeX/subconverter](https://github.com/MetaCubeX/subconverter)订阅转换后端，仅内网
 - [CareyWang/sub-web](https://github.com/CareyWang/sub-web)订阅转换前端
 - [sub-store-org/Sub-Store](https://github.com/sub-store-org/Sub-Store)订阅管理器
 
@@ -107,6 +107,14 @@ Disk：WesternDigital WDC WD40EFPX-68C6CNO 4TB x4
 - WireGuard 状态：显示WireGuard客户端状态，服务端搭配DDNS实现WireGuard访问内网
 - KMS Server：自动激活内网Windows设备和Windows Office
 
+## SA5212M4
+
+安装ProxmoxVE，运行系统：
+
+- Alpine-virt-3.23
+- BackTrack-5-R3
+- Ubuntu-6.06-LTS
+- Ubuntu-10.04-LTS
 ## R730xd ESXi
 
 ### Debian
@@ -116,9 +124,11 @@ Debian虚拟机从OpenClash排除代理，运行：
 - [cmliu/CFnat-Docker](https://github.com/cmliu/CFnat-Docker)优选CloudflareIP并转发指定CDN端口到本地
 - [XIU2/CloudflareSpeedTest](https://github.com/XIU2/CloudflareSpeedTest)优选CloudflareIP并搭配shell脚本写入域名
 - [AlistGo/alist](https://github.com/AlistGo/alist)挂载本地磁盘WebDAV服务
-- [gdy666/lucky](https://github.com/gdy666/lucky)网络服务工具，支持DDNS、STUN、Web服务等功能
+- [gdy666/lucky](https://github.com/gdy666/lucky)网络服务工具，支持DDNS、STUN、SSL管理、Web服务等功能
 - [cloudflare/cloudflared](https://github.com/cloudflare/cloudflared)运行在lucky中的cloudflaretunnel服务
 - [ipfs/ipfs-webui](https://github.com/ipfs/ipfs-webui)基于[ipfs/kubo](https://github.com/ipfs/kubo)的IPFS节点管理面板
+- [actions/runner](https://github.com/actions/runner)Github自托管Actions Runner
+- [cmliu/subconverter](https://github.com/cmliu/subconverter)支持WebSocket传输层的订阅转换后端，通过cloudflared映射到域名
 
 ### Ubuntu
 
