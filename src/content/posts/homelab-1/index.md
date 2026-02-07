@@ -87,6 +87,7 @@ Disk：WesternDigital WDC WD40EFPX-68C6CNO 4TB x4
 - [teamspeak3](https://github.com/TeamSpeak-Systems/teamspeak-linux-docker-images)更隐私的TS3服务器（仅内网），其他人使用Tailscale远程
 - [Umami](https://github.com/umami-software/umami)网站统计，通过cloudflared穿透
 - [louislam/uptime-kuma](https://github.com/louislam/uptime-kuma)服务监控，通过cloudflared穿透
+
 ### 宿主机服务
 
 [Tailscale](https://github.com/tailscale/tailscale)服务端：开启尾网和出口节点，搭配软路由静态路由表，自建DERP服务器，实现远程访问内网和使用家庭网络出口代理等功能
@@ -129,6 +130,7 @@ Debian虚拟机从OpenClash排除代理，运行：
 - [ipfs/ipfs-webui](https://github.com/ipfs/ipfs-webui)基于[ipfs/kubo](https://github.com/ipfs/kubo)的IPFS节点管理面板
 - [actions/runner](https://github.com/actions/runner)Github自托管Actions Runner
 - [cmliu/subconverter](https://github.com/cmliu/subconverter)支持WebSocket传输层的订阅转换后端，通过cloudflared映射到域名
+- [go-gitea/gitea](https://github.com/go-gitea/gitea)自托管Git服务，通过cloudflared穿透
 
 ### Ubuntu
 
