@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/content/posts/homelab-1/index.md",
+                "file": "src/content/posts/torsocks5/index.md",
                 "mode": "source",
                 "source": false
               },
@@ -171,6 +171,9 @@
   },
   "active": "9a6ace809ae743ed",
   "lastOpenFiles": [
+    "src/content/posts/torsocks5/index-6.png",
+    "src/content/posts/torsocks5/index.png",
+    "src/content/posts/homelab-1/index.md",
     "src/content/posts/cloudflarer2alist/index.md",
     "src/content/posts/cloudflaretob2/index.md",
     "src/content/posts/cloudflaretob2/index.png",
@@ -182,9 +185,7 @@
     "src/content/posts/cloudflaretob2/index-6.png",
     "src/content/posts/cloudflaretob2/index-5.png",
     "src/content/posts/cloudflaretob2/index-4.png",
-    "src/content/posts/cloudflaretob2/index-3.png",
     "src/content/posts/example-post/index.md",
-    "src/content/posts/homelab-1/index.md",
     "src/content/posts/cloudflaretob2",
     "src/content/posts/torsocks5/index.md",
     "src/content/posts/homelab-1",

@@ -17,13 +17,15 @@ draft: false
 ![](src/content/posts/torsocks5/index-1.png)
 # 安装并启动Tor浏览器
 
-按照安装包提示安装。前往 设置-连接界面配置网桥
+按照安装包提示安装。前往 设置-连接界面配置连接
 
 ![](src/content/posts/torsocks5/index-2.png)
 
-如果你在中国大陆，请优先向[@GetBridgesBot](https://t.me/@GetBridgesBot)请求IPv6 Webtunnel网桥，这可以保证连通性。
+如果你在网络受限地区，可以使用全隧道VPN出口到无限制环境，或使用代理软件开启Socks5端口并配置Tor浏览器经过代理，需代理服务端和客户端关闭“流量嗅探”功能（如果有）：
 
-接下来尝试连接，成功后会出现浏览器主页：
+![](src/content/posts/torsocks5/index-6.png)
+
+接下来尝试连接，成功后会出现浏览器主页（如果最后无法连接，可尝试网桥：设置-连接-网桥）：
 
 ![](src/content/posts/torsocks5/index-3.png)
 
