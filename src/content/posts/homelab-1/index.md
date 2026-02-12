@@ -110,12 +110,17 @@ Disk：WesternDigital WDC WD40EFPX-68C6CNO 4TB x4
 
 ## SA5212M4
 
-安装ProxmoxVE，运行系统：
+安装ProxmoxVE，运行虚拟机：
 
 - Alpine-virt-3.23
 - BackTrack-5-R3
 - Ubuntu-6.06-LTS
 - Ubuntu-10.04-LTS
+
+LXC：
+
+- 不经过代理的Xray Socks5服务 （Alpine3.23）
+- CS:GO 局域网服务器（Ubuntu22.04）
 ## R730xd ESXi
 
 ### Debian
