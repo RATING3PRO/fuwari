@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "2bea43863c0984ec",
+        "id": "bf06a72229fd73ef",
         "type": "tabs",
         "children": [
           {
-            "id": "9a6ace809ae743ed",
+            "id": "107f6ca61ecd845c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/content/posts/homelab-1/index.md",
+                "file": "src/content/posts/csgoserver/index.md",
                 "mode": "source",
                 "source": false
               },
@@ -151,12 +151,12 @@
               "title": "index 的大纲"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -169,22 +169,25 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "9a6ace809ae743ed",
+  "active": "107f6ca61ecd845c",
   "lastOpenFiles": [
-    "src/content/posts/torsocks5/index.md",
-    "src/content/posts/torsocks5/index-6.png",
-    "src/content/posts/torsocks5/index.png",
     "src/content/posts/homelab-1/index.md",
+    "src/content/posts/csgoserver/index.md",
+    "src/content/posts/csgoserver/index-8.png",
+    "src/content/posts/csgoserver/index-7.png",
+    "src/content/posts/csgoserver/index-6.png",
+    "src/content/posts/csgoserver/index-5.png",
+    "src/content/posts/csgoserver/index-4.png",
+    "src/content/posts/csgoserver/index-3.png",
+    "src/content/posts/csgoserver/index-2.png",
+    "src/content/posts/csgoserver/index-1.png",
+    "src/content/posts/csgoserver/index.png",
+    "src/content/posts/csgoserver/Counter-strike Global Offensive Screenshot 2026.02.12 - 20.44.33.41.png",
+    "src/content/posts/torsocks5/index.md",
+    "src/content/posts/csgoserver",
+    "未命名.base",
     "src/content/posts/cloudflarer2alist/index.md",
     "src/content/posts/cloudflaretob2/index.md",
-    "src/content/posts/cloudflaretob2/index.png",
-    "src/content/posts/cloudflarer2alist/index.png",
-    "src/content/posts/cloudflaretob2/index-9.png",
-    "src/content/posts/cloudflaretob2/index-8.png",
-    "src/content/posts/cloudflaretob2/index-8.png",
-    "src/content/posts/cloudflaretob2/index-7.png",
-    "src/content/posts/cloudflaretob2/index-6.png",
-    "src/content/posts/cloudflaretob2/index-5.png",
     "src/content/posts/example-post/index.md",
     "src/content/posts/cloudflaretob2",
     "src/content/posts/homelab-1",
@@ -195,8 +198,6 @@
     "dist/pagefind/fragment/zh-cn_5c9053f.pf_fragment",
     "dist/pagefind/index/zh-cn_6992ed9.pf_index",
     "dist/pagefind/pagefind-entry.json",
-    "dist/pagefind/wasm.unknown.pagefind",
-    "dist/pagefind/pagefind-modular-ui.js",
     "dash.cloudflare.com.md"
   ]
 }
