@@ -463,19 +463,22 @@ echo "===== 1v1 CONFIG LOADED ====="
 
 1：文中写的配置文件并不都是最优，可以问AI按需修改
 
-2：某些插件提供编译好的`.smx`文件，可能不适配你的Sourcemod版本，如果提供`.sp`文件，放入和cd到`addons/sourcemod/scripting/`目录，然后使用`./spcomp your_mod.sp`编译为`.smx`，最后`mv your_mod.smx ../plugins`再重载模组即可
+2：Legacy Server会有极大的不确定性，做好重要数据的快照及备份
 
-2：部分复杂的插件压缩包会直接包含`addons`和`cfg`等目录，在安装Metamod相同的位置相同的方式解压即可
+3：文章中的配置文件会在发现更优方案时更新
 
-3：Legacy Server会有极大的不确定性，做好重要数据的快照及备份
+4：某些插件提供编译好的`.smx`文件，可能不适配你的Sourcemod版本，如果提供`.sp`文件，放入和cd到`addons/sourcemod/scripting/`目录，然后使用`./spcomp your_mod.sp`编译为`.smx`，最后`mv your_mod.smx ../plugins`再重载模组即可
 
-4：文章中的配置文件会在发现更优方案时更新
+5：部分复杂的插件压缩包会直接包含`addons`和`cfg`等目录，在安装Metamod相同的位置相同的方式解压即可
 
-5：由于V社复用了CS2和CSGO的AppID，启动项和cfg的路径关系稍微复杂，客户端CSGO想导入cfg可以在`Steam\steamapps\common\Counter-Strike Global Offensive\csgo\cfg`下创建`autoexec.cfg`，这样CS2和CSGO会分别导入自己的`autoexec.cfg`
+6：皮肤等插件需要在`addons/sourcemod/configs/core.cfg`文件底部把`"FollowCSGOServerGuidelines"`改为`no`（配置GSLT的不建议改，可能会封禁账号）
 
-6：想下载一些工作坊地图可以打开CS2工作坊，搜索地图并在底部开启`显示不兼容项目`，订阅后打开`Counter-Strike Global Offensive\csgo\maps\workshop`，里面有创意工坊id文件夹，里面有`.bsp`文件的就是CSGO可用地图，直接拷贝创意工坊id文件夹到服务器的`Counter-Strike Global Offensive Beta - Dedicated Server/csgo/maps/workshop/`文件夹下（一定要带着创意工坊id的文件夹，没有workshop目录就创建），最后可在上面`maps.ini`的文件中添加地图，像`workshop/2677944247/aim_map_nuke`这样带着路径
+7：由于V社复用了CS2和CSGO的AppID，启动项和cfg的路径关系稍微复杂，客户端CSGO想导入cfg可以在`Steam\steamapps\common\Counter-Strike Global Offensive\csgo\cfg`下创建`autoexec.cfg`，这样CS2和CSGO会分别导入自己的`autoexec.cfg`
 
-7：如果不想每次都输`connect IP`，可以在上面说的`autoexec.cfg`里写入`alias lan "connect YourServerIP"`，这样打开控制台输入`lan`即可连接
+8：想下载一些工作坊地图可以打开CS2工作坊，搜索地图并在底部开启`显示不兼容项目`，订阅后打开`Counter-Strike Global Offensive\csgo\maps\workshop`，里面有创意工坊id文件夹，里面有`.bsp`文件的就是CSGO可用地图，直接拷贝创意工坊id文件夹到服务器的`Counter-Strike Global Offensive Beta - Dedicated Server/csgo/maps/workshop/`文件夹下（一定要带着创意工坊id的文件夹，没有workshop目录就创建），最后可在上面`maps.ini`的文件中添加地图，像`workshop/2677944247/aim_map_nuke`这样带着路径
+
+9：如果不想每次都输`connect IP`，可以在上面说的`autoexec.cfg`里写入`alias lan "connect YourServerIP"`，这样打开控制台输入`lan`即可连接
+
 # 参考文章
 
 [从零开始的CSGO服务器教程（三）：实战2——全皮肤全贴纸/回防服务器](https://www.bilibili.com/read/cv7409672)
