@@ -34,10 +34,6 @@ category: Homelab
 ## 存储服务器
 
 - 绿联 DXP4800
-
-
-![](index.jpg)
-
 # 硬件配置
 
 
@@ -110,7 +106,7 @@ Disk：WesternDigital WDC WD40EFPX-68C6CNO 4TB x4
 
 ## SA5212M4
 
-安装ProxmoxVE，运行虚拟机：
+安装ProxmoxVE 9，运行虚拟机：
 
 - Alpine-virt-3.23
 - BackTrack-5-R3
@@ -121,7 +117,9 @@ LXC：
 
 - 不经过代理的Xray Socks5服务 （Alpine3.23）
 - CS:GO 局域网服务器（Ubuntu22.04）
-## R730xd ESXi
+- Gitea（Ubuntu24.04）
+- 不经过代理的[argo-vless](https://github.com/RATING3PRO/Vless-Websocket-Argotunnel-Docker)（OCI镜像）
+## R730xd ESXi 7.0 U3
 
 ### Debian
 
