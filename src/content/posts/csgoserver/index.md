@@ -479,6 +479,17 @@ echo "===== 1v1 CONFIG LOADED ====="
 
 9：如果不想每次都输`connect IP`，可以在上面说的`autoexec.cfg`里写入`alias lan "connect YourServerIP"`，这样打开控制台输入`lan`即可连接
 
+10：如果处于远程连接，例如Tailscale等VPN服务的来源IP地址(100.64.0.0/10)可能会在`sv_lan 1`的情况下被拒绝，需要做NAT转发，例如我在尾网路由配置：
+
+```bash
+# YOUR_CSGO_SERVER_IP改为服务器IP，eth0改为LAN网卡的名称(查看ip addr)，端口可按需修改
+iptables -t nat -A POSTROUTING \
+  -s 100.64.0.0/10 \
+  -d YOUR_CSGO_SERVER_IP \
+  -p udp --dport 27015 \
+  -o eth0 \
+  -j MASQUERADE
+```
 # 参考文章
 
 [从零开始的CSGO服务器教程（三）：实战2——全皮肤全贴纸/回防服务器](https://www.bilibili.com/read/cv7409672)

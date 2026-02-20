@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/content/posts/homelab-1/index.md",
+                "file": "src/content/posts/csgoserver/index.md",
                 "mode": "source",
                 "source": false
               },
@@ -171,8 +171,8 @@
   },
   "active": "107f6ca61ecd845c",
   "lastOpenFiles": [
-    "src/content/posts/csgoserver/index.md",
     "src/content/posts/homelab-1/index.md",
+    "src/content/posts/csgoserver/index.md",
     "src/content/posts/csgoserver/index-8.png",
     "src/content/posts/csgoserver/index-7.png",
     "src/content/posts/csgoserver/index-6.png",
