@@ -37,6 +37,8 @@ sudo chown -R csgo:csgo "/home/csgo/Steam/steamapps/common/Counter-Strike Global
 
 ## 安装steamcmd：
 
+如果没有将`csgo`添加到sudoers，则使用其他用户，例如root
+
 Debian：
 
 ```bash
@@ -52,6 +54,8 @@ sudo dpkg --add-architecture i386
 sudo apt update
 # 安装steamcmd
 sudo apt install steamcmd
+# 修复bash PATH环境变量（如使用其他用户安装）
+echo 'export PATH=$PATH:/usr/games' >> ~/.bashrc && source ~/.bashrc
 ```
 
 Ubuntu：
@@ -65,6 +69,8 @@ sudo dpkg --add-architecture i386
 sudo apt update
 # 安装steamcmd
 sudo apt install steamcmd
+# 修复bash PATH环境变量（如使用其他用户安装）
+echo 'export PATH=$PATH:/usr/games' >> ~/.bashrc && source ~/.bashrc
 ```
 
 其他系统参考[Valve Developer Community](https://developer.valvesoftware.com/wiki/SteamCMD)，本文其他命令仍然以Debian/Ubuntu为例
