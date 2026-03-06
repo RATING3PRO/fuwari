@@ -117,7 +117,9 @@ LXC：
 
 - 不经过代理的Xray Socks5服务 （Alpine3.23）
 - CS:GO 局域网服务器（Ubuntu22.04）
+- CS2 局域网服务器（Ubuntu22.04）
 - Gitea（Ubuntu24.04）
+- [SRS](https://github.com/ossrs/srs)（Debian13）
 - 不经过代理的[argo-vless](https://github.com/RATING3PRO/Vless-Websocket-Argotunnel-Docker)（OCI镜像）
 ## R730xd ESXi 7.0 U3
 
