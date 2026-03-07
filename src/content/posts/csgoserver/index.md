@@ -93,9 +93,9 @@ quit
 仍然在csgo用户下进行：
 
 ```bash
-#进入cfg目录
+# 进入cfg目录
 cd "/home/csgo/Steam/steamapps/common/Counter-Strike Global Offensive Beta - Dedicated Server/csgo/cfg"
-#新建或编辑server.cfg
+# 新建或编辑server.cfg
 nano server.cfg
 ```
 
@@ -130,6 +130,34 @@ mp_maxrounds 30
 mp_autokick 0
 // 禁用TK处罚(按需修改)
 mp_tkpunish 0
+// CT默认手枪设置(USP:weapon_usp_silencer|P2000:weapon_p2000)
+mp_ct_default_secondary weapon_usp_silencer
+```
+
+修复竞技模式：
+
+```bash
+# 进入cfg目录
+cd "/home/csgo/Steam/steamapps/common/Counter-Strike Global Offensive Beta - Dedicated Server/csgo/cfg"
+# 新建gamemode_competitive_server.cfg
+nano gamemode_competitive_server.cfg
+```
+
+写入：
+
+```nano
+// 60秒热身
+mp_warmuptime 60
+// 10个BOT
+bot_quota 10
+// fill模式会在真实玩家加入时踢出对应BOT
+bot_quota_mode fill
+// 玩家进入后再填充BOT
+bot_join_after_player 1
+// 开启自动平衡
+mp_autoteambalance 1
+// 队伍人数差异最大为1人
+mp_limitteams 1
 // CT默认手枪设置(USP:weapon_usp_silencer|P2000:weapon_p2000)
 mp_ct_default_secondary weapon_usp_silencer
 ```
