@@ -174,7 +174,7 @@ mv libgcc_s.so.1 libgcc_s.so.1.bak
 
 
 > [!warning]
-如果需要使用独立版本的CS:GO客户端，需要在服务端的`csgo/steam.inf`中更改`appID`为`4465480`，否则会无法分配正确STEAM_ID。CS2 Legacy分支则不需要更改，但两者相互不兼容
+> 如果需要使用独立版本的CS:GO客户端，需要在服务端的`csgo/steam.inf`中更改`appID`为`4465480`，否则会无法分配正确STEAM_ID。CS2 Legacy分支则不需要更改，但两者相互不兼容
 
 测试启动服务器：
 
