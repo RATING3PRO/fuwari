@@ -34,7 +34,7 @@ tailscale up --netfilter-mode=off  --advertise-routes=CIDR --accept-routes --adv
 | 参数                      | 解释                               |
 | ----------------------- | -------------------------------- |
 | --netfilter-mode=off    | 关闭自动操作防火墙与转发                     |
-| --advertise-routes=CIDR | 开启尾网路由，CIDR替换为例如`192.168.1.0/24` |
+| --advertise-routes=CIDR | 开启尾网路由，CIDR替换为局域网网段，例如`192.168.1.0/24` |
 | --accept-routes         | 允许其他尾网路由                         |
 | --advertise-exit-node   | 开启出口节点(全隧道代理)                    |
 | --accept-dns=false      | 关闭覆写DNS                          |
