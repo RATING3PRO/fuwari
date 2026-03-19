@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/content/posts/csgoserver/index.md",
+                "file": "src/content/posts/tailscale/index.md",
                 "mode": "source",
                 "source": false
               },
@@ -171,19 +171,23 @@
   },
   "active": "107f6ca61ecd845c",
   "lastOpenFiles": [
-    "src/content/posts/homelab-1/index.md",
+    "src/content/posts/torsocks5/index.md",
+    "src/content/posts/tailscale/index.png",
+    "src/content/posts/tailscale/index.md",
     "src/content/posts/csgoserver/index.md",
+    "src/content/posts/tailscale/index-3.png",
+    "src/content/posts/tailscale/index-2.png",
+    "src/content/posts/tailscale/index-1.png",
+    "src/content/posts/tailscale",
+    "src/content/posts/homeproxy/index.md",
+    "src/content/posts/csgoserver/index.png",
+    "src/content/posts/homeproxy",
+    "src/content/posts/homelab-1/index.md",
     "src/content/posts/csgoserver/index-8.png",
     "src/content/posts/csgoserver/index-7.png",
     "src/content/posts/csgoserver/index-6.png",
     "src/content/posts/csgoserver/index-5.png",
     "src/content/posts/csgoserver/index-4.png",
-    "src/content/posts/csgoserver/index-3.png",
-    "src/content/posts/csgoserver/index-2.png",
-    "src/content/posts/csgoserver/index-1.png",
-    "src/content/posts/csgoserver/index.png",
-    "src/content/posts/csgoserver/Counter-strike Global Offensive Screenshot 2026.02.12 - 20.44.33.41.png",
-    "src/content/posts/torsocks5/index.md",
     "src/content/posts/csgoserver",
     "未命名.base",
     "src/content/posts/cloudflarer2alist/index.md",
@@ -196,8 +200,6 @@
     "dist/pagefind/fragment/zh-cn_4277a0d.pf_fragment",
     "dist/pagefind/fragment/zh-cn_3ec4daf.pf_fragment",
     "dist/pagefind/fragment/zh-cn_5c9053f.pf_fragment",
-    "dist/pagefind/index/zh-cn_6992ed9.pf_index",
-    "dist/pagefind/pagefind-entry.json",
     "dash.cloudflare.com.md"
   ]
 }

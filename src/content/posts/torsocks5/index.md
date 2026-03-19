@@ -8,7 +8,7 @@ published: 2025-10-30
 description: 介绍如何在 Windows 系统中使用 Tor Browser，将其 Socks5 代理端口开放给内网设备使用，适用于局域网代理与匿名访问场景。
 image: ./index.png
 category: Tor
-draft: false
+draft: true
 ---
 # 获取Tor浏览器
 

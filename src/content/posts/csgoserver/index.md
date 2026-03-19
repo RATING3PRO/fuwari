@@ -10,7 +10,7 @@ title: Linux 搭建 CSGO 内网服务器完整教程（含插件、1v1 模式与
 image: ./index.png
 draft: false
 category: Game
-description: 记录一次在内网环境中部署 CSGO 服务器的完整过程：使用 Linux + SteamCMD 构建专用服务器，结合 SourceMod 插件实现武器替换、1v1 模式与管理菜单扩展，并优化 128 Tick 与网络参数。本文更偏向真实踩坑记录与架构实践。
+description: 记录一次在内网环境中部署 CSGO 服务器的完整过程：使用 Linux + SteamCMD 构建专用服务器，结合 SourceMod 插件实现武器替换、1v1 模式与管理菜单扩展，并优化 128 Tick 与网络参数。
 ---
 前两天翻B站收藏夹发现几年前收藏了一个搭建CSGO服务器的视频，打算在CS2时代试一下，发现还有不少问题
 # 环境准备
