@@ -16,5 +16,37 @@ const className = Astro.props.class;
 
 <script>
     import { loadGiscus } from "../../utils/giscus-utils";
-    loadGiscus();
+
+    function initGiscus() {
+        // Wait for the .giscus container to be in the DOM
+        const container = document.querySelector(".giscus");
+        if (container) {
+            loadGiscus();
+        }
+    }
+
+    // Handle initial page load
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initGiscus);
+    } else {
+        initGiscus();
+    }
+
+    // Handle Swup page transitions
+    const setupSwup = () => {
+        window.swup.hooks.on("page:view", initGiscus);
+        window.swup.hooks.on("content:replace", () => {
+            // Remove old giscus iframe before content replacement
+            const oldFrame = document.querySelector(".giscus-frame");
+            if (oldFrame) {
+                oldFrame.remove();
+            }
+        }, { before: true });
+    };
+
+    if (window.swup) {
+        setupSwup();
+    } else {
+        document.addEventListener("swup:enable", setupSwup);
+    }
 </script>
