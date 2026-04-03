@@ -130,17 +130,12 @@ export const profileConfig: ProfileConfig = {
 		{
 			name: "Telegram",
 			icon: "fa6-brands:telegram",
-			url: "https://t.me/Exeluck",
+			url: "https://t.me/rating3pro_jlzy",
 		},
 		{
 			name: "QQ",
 			icon: "fa6-brands:qq",
 			url: "https://qm.qq.com/q/JSR8FO5fwI",
-		},
-		{
-			name: "WeChat",
-			icon: "fa6-brands:weixin",
-			url: "https://u.wechat.com/EMGUyhWS2pITJyJoQMsj-9A?s=2",
 		},
 	],
 };
