@@ -86,7 +86,7 @@ curl -fsSL https://tailscale.com/install.sh | sh
 
 ```bash
 # 拉起Tailscale(参数解释看上方)
-tailscale up --advertise-routes=CIDR --accept-routes --advertise-exit-node
+tailscale up --advertise-routes=CIDR --accept-routes --advertise-exit-node --accept-dns=false
 ```
 
 # 配置静态路由表
