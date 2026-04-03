@@ -1,9 +1,43 @@
 ---
-
 import { profileConfig } from "../config";
 import { url } from "../utils/url-utils";
+import { execSync } from "child_process";
 
 const currentYear = new Date().getFullYear();
+
+// Fetch GitHub commit hash locally or from build environments
+let commitHash = "";
+let commitTime = "";
+try {
+    commitHash = process.env.VERCEL_GIT_COMMIT_SHA ||
+                 process.env.CF_PAGES_COMMIT_SHA ||
+                 process.env.GITHUB_SHA || "";
+    if (!commitHash) {
+        commitHash = execSync("git rev-parse --short HEAD").toString().trim();
+    } else {
+        commitHash = commitHash.substring(0, 7);
+    }
+    try {
+        commitTime = execSync('git log -1 --format=%cd --date=format:"%H:%M:%S"').toString().trim();
+    } catch (e) {}
+} catch (e) {
+    commitHash = "";
+}
+
+// Ensure remote URL for the commit link
+let repoUrl = "https://github.com/RATING3PRO/fuwari";
+try {
+    const originUrl = execSync("git config --get remote.origin.url").toString().trim();
+    if (originUrl.startsWith("https://github.com/")) {
+        repoUrl = originUrl.replace(/\.git$/, "");
+    } else if (originUrl.startsWith("git@github.com:")) {
+        repoUrl = originUrl.replace("git@github.com:", "https://github.com/").replace(/\.git$/, "");
+    }
+} catch (e) {
+    // Keep fallback
+}
+
+const commitUrl = commitHash ? `${repoUrl}/commit/${commitHash}` : "";
 ---
 
 <!--<div class="border-t border-[var(&#45;&#45;primary)] mx-16 border-dashed py-8 max-w-[var(&#45;&#45;page-width)] flex flex-col items-center justify-center px-6">-->
@@ -18,6 +52,14 @@ const currentYear = new Date().getFullYear();
          <br>
          <a class="transition link text-[var(--primary)] font-medium" href={url("/rss.xml")} target="_blank">RSS</a> |
          <a class="transition link text-[var(--primary)] font-medium" href={url("/sitemap-index.xml")} target="_blank">Sitemap</a>
+         {commitHash && (
+             <>
+                 <br>
+                 <a class="transition link text-[var(--primary)] font-medium" href={commitUrl} target="_blank" title={`View commit ${commitHash} on GitHub`}>
+                     {commitHash}{commitTime ? `@${commitTime}` : ''}
+                 </a>
+             </>
+         )}
          <br>
     </div>
 </div>
