@@ -1,10 +1,11 @@
 ---
+import Giscus from "@components/comments/Giscus.astro";
 import MainGridLayout from "@layouts/MainGridLayout.astro";
 import { Icon } from "astro-icon/components";
-import Giscus from "@components/comments/Giscus.astro";
 import { profileConfig, siteConfig } from "../config";
 
-const mySiteUrl = Astro.site?.toString().replace(/\/$/, "") ?? "https://www.xie.today";
+const mySiteUrl =
+	Astro.site?.toString().replace(/\/$/, "") ?? "https://www.xie.today";
 ---
 
 <MainGridLayout title="友链">
@@ -62,9 +63,23 @@ const mySiteUrl = Astro.site?.toString().replace(/\/$/, "") ?? "https://www.xie.
                 </div>
                 <div class="text-sm text-black/50 dark:text-white/50">君との時間が一秒でも長くなるなら,ずっとじゃなくていい</div>
             </a>
+            <a href="https://www.hoshiroko.com" target="_blank" class="friend-card">
+                <div class="flex items-center gap-2">
+                    <img src="https://api.hoshiroko.com/img/avatar.jpg" loading="lazy" class="w-5 h-5 rounded">
+                    <div class="font-bold text-black dark:text-white">薄荷の小屋</div>
+                </div>
+                <div class="text-sm text-black/50 dark:text-white/50">越是拼命往前伸手，渴望之物越是渐行渐远</div>
+            </a>
+            <a href="https://www.mengxiblog.top" target="_blank" class="friend-card">
+                <div class="flex items-center gap-2">
+                    <img src="https://webp.isla.fan/avatar/hikaru-tomo.png" loading="lazy" class="w-5 h-5 rounded">
+                    <div class="font-bold text-black dark:text-white">Hikaru Lab</div>
+                </div>
+                <div class="text-sm text-black/50 dark:text-white/50">即使是人造的记忆，也有它存在的价值</div>
+            </a>
         </div>
 
-        <div id="comments" class="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
+        <div id="comments" class="mt-8 pt-6 border-t border-black/10 dark:border-white/15">
             <div class="flex items-center gap-2 mb-3">
                 <Icon name="material-symbols:chat-bubble" class="text-[var(--primary)] text-xl">
                 <h2 class="text-lg font-semibold text-black dark:text-white">留言</h2>
