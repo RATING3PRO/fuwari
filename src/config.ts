@@ -31,43 +31,6 @@ export const siteConfig: SiteConfig = {
 		enable: true, // Display the table of contents on the right side of the post
 		depth: 2, // Maximum heading depth to show in the table, from 1 to 3
 	},
-	mirrors: {
-		enable: true,
-		sites: [
-			{
-				name: "主站Cloudflare",
-				url: "https://www.xie.today",
-			},
-			{
-				name: "镜像站Edgeone",
-				url: "https://eocdnblog.xie.today",
-			},
-			{
-				name: "镜像站Cloudflare",
-				url: "https://cfcdnblog.xie.today",
-			},
-			{
-				name: "镜像站Vercel",
-				url: "https://vlcdnblog.xie.today",
-			},
-			{
-				name: "镜像站Netlify",
-				url: "https://nlcdnblog.xie.today",
-			},
-			{
-				name: "镜像站ESA",
-				url: "https://accdnblog.xie.today",
-			},
-			{
-				name: "镜像站GithubPage",
-				url: "https://ghcdnblog.xie.today",
-			},
-			{
-				name: "镜像站Zeabur",
-				url: "https://zbcdnblog.xie.today",
-			},
-		],
-	},
 	favicon: [
 		{
 			src: "/favicon/rt3box-favicon.jpg",

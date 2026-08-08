@@ -35,14 +35,6 @@ export type SiteConfig = {
 		enable: boolean;
 		depth: 1 | 2 | 3;
 	};
-	mirrors?: {
-		enable: boolean;
-		sites: {
-			name: string;
-			url: string;
-		}[];
-	};
-
 	favicon: Favicon[];
 };
 
