@@ -62,7 +62,7 @@ export const navBarConfig: NavBarConfig = {
 		},
 		{
 			name: "站点统计",
-			url: "https://umami.xie.today/share/qgTZ6Q4LDKr7VPKo",
+			url: "https://umami.b23.ltd/share/qgTZ6Q4LDKr7VPKo",
 			external: true,
 		},
 	],
