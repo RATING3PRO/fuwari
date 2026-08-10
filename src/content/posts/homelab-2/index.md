@@ -119,7 +119,7 @@ update-initramfs -u
 
 # 软件服务与网络优化
 
-在以前ESXi中有一台被排除代理的虚拟机，运行大部分的服务，我将这些服务迁移到了单独的LXC上。另外我以前的内网穿透方案是cloudflare tunnel，看到这篇文章[Netlify、Vercel反代网站](https://2x.nz/posts/netlify-vercel-proxy/)后我更改了部分服务的穿透方案。
+在以前ESXi中有一台被排除代理的虚拟机，运行大部分的服务，我将这些服务迁移到了单独的LXC上。另外我以前的内网穿透方案是cloudflare tunnel，发现Cloudflare回源移动IPv6走HKG后我更改了部分服务的穿透方案。
 我会展示部分服务更改回源方案和迁移的过程。
 
 ## Umami迁移
@@ -150,9 +150,9 @@ docker exec -i umami-db psql -U umami -d umami < umami_backup.sql
 docker compose start umami
 ```
 
-## 使用lucky配置IPv6 DDNS与Acme申请证书并配置反向代理
+## 使用lucky配置IPv6 DDNS与Cloudflare TLS回源
 
-安装可参考[官方文档](https://lucky666.cn/docs/install)，这里会使用lucky配置DDNS、Acme申请证书和反向代理，最后达成回源部分也保持https加密
+安装可参考[官方文档](https://lucky666.cn/docs/install)，这里会使用lucky配置DDNS和反向代理，最后达成回源部分也保持TLS加密
 
 ### 配置DDNS
 
@@ -160,18 +160,39 @@ docker compose start umami
 
 ![](src/content/posts/homelab-2/index-5.png)
 
-### 配置Acme
+### 下载边缘证书并配置反向代理
 
-左侧选择SSL/TLS证书，选择添加证书，添加方式选择ACME，选择你的DNS托管商，其他按照提示填写即可：
+为了保持回源阶段也保持TLS加密，需要先将Cloudflare域名管理中的加密模式调整为 完整 或 完整（严格）：
 
-![](src/content/posts/homelab-2/index-6.png)
+![](src/content/posts/homelab-2/index-8.png)
 
-### 配置反向代理
+然后下载边缘证书，对比自签证书或CA签发证书好处是不用经常续期（最高15年有效期）和更高的安全性：
 
-左侧选择Web服务，添加Web服务规则，自定义端口，开启TLS(域名会自动匹配刚才的TLS证书)，添加子规则，服务类型选择反向代理，前端地址填写对应域名(无需端口)，后端地址填写内网Web服务的IP+端口，其余保持默认：
+![](src/content/posts/homelab-2/index-9.png)
 
-![](src/content/posts/homelab-2/index-7.png)
+![](src/content/posts/homelab-2/index-10.png)
 
-## 配置Netlify回源
+选择PEM格式并将证书保存为`*.crt`文件，密钥保存为`*.key`文件。
+在Lucky后台SSL/TLS证书页面上传证书文件：
 
-参考上述文章[Netlify、Vercel反代网站](https://2x.nz/posts/netlify-vercel-proxy/)，注意将url改为https(上面开启了TLS)
+![](src/content/posts/homelab-2/index-11.png)
+
+在Lucky后台Web服务页面配置反向代理：
+监听类型选择IPv6，TLS开启，监听端口选择一个未被占用的非标端口（常规端口会被运营商屏蔽入站），前端地址填入你希望使用的域名
+
+![](src/content/posts/homelab-2/index-12.png)
+
+### 配置DNS记录与Origin Rules
+
+添加对应域名的DNS记录，CNAME类型，写入上面配置的DDNS域名，开启代理：
+
+![](src/content/posts/homelab-2/index-13.png)
+
+默认完整加密会回源源站的443端口，需要配置Origin Rules回源非标端口：
+自定义筛选表达式 主机名 等于 对应的域名
+目标端口 重写到 配置的端口
+
+![](src/content/posts/homelab-2/index-14.png)
+
+![](src/content/posts/homelab-2/index-15.png)
+
