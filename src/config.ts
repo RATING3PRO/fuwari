@@ -91,9 +91,9 @@ export const profileConfig: ProfileConfig = {
 			url: "https://github.com/RATING3PRO",
 		},
 		{
-			name: "Telegram",
+			name: "Telegram Channel",
 			icon: "fa6-brands:telegram",
-			url: "https://t.me/rating3pro_jlzy",
+			url: "https://t.me/rating3pro_zh",
 		},
 		{
 			name: "QQ",
