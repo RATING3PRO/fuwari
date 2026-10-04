@@ -18,6 +18,8 @@ category: Homelab
 
 [小米AX3000](#小米AX3000)
 
+[领势WRT1200AC](#领势WRT1200AC)
+
 神秘J1900小主机（待更新，我懒了）
 
 # 极路由3
@@ -94,3 +96,8 @@ cat /tmp/yourfilename.trx >/dev/mtdblock6 && reboot
 
 如`reboot`无法使用，则等待30秒后手动断电重启
 
+# 领势WRT1200AC
+
+在[OpenWrt firmware-selector](https://firmware-selector.openwrt.org/)找`Linksys WRT1200AC`的Factory固件直接在原厂后台刷入即可
+
+在主分区运行系统时会将OpenWrt刷入辅助分区，可重启三次切换分区或使用`luci-app-advanced-reboot`程序选择启动分区

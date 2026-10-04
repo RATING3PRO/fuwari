@@ -13,20 +13,6 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/content/posts/homelab-2/index.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "index"
-            }
-          },
-          {
-            "id": "a1af7049258f4dbf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
                 "file": "src/content/posts/about-router/index.md",
                 "mode": "source",
                 "source": false
@@ -35,8 +21,7 @@
               "title": "index"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -186,8 +171,11 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "a1af7049258f4dbf",
+  "active": "107f6ca61ecd845c",
   "lastOpenFiles": [
+    "src/content/posts/homelab-2/index.md",
+    "领势WRT1200AC.md",
+    "src/content/posts/about-router/index.md",
     "dist/pagefind/fragment/zh-cn_bf3c1ba.pf_fragment",
     "dist/pagefind/index/zh-cn_e34c51a.pf_index",
     "dist/pagefind/fragment/zh-cn_24cadc1.pf_fragment",
@@ -198,7 +186,6 @@
     "dist/pagefind/fragment/zh-cn_c74fb2c.pf_fragment",
     "dist/pagefind/fragment/zh-cn_a67b8c2.pf_fragment",
     "dist/pagefind/fragment/zh-cn_5d43351.pf_fragment",
-    "dist/pagefind/pagefind-entry.json",
     "dist/_astro/index.B_WtmH9q_g0hG6.webp",
     "dist/_astro/index-9.Blm-PjER_ZKHJ1A.webp",
     "dist/_astro/index-8.BlAxBMUQ_Z1LDdEp.webp",
@@ -210,8 +197,6 @@
     "dist/_astro/index.BYFNS4rl_1rTWKX.webp",
     "dist/_astro/index.BWOBJ3jU_Z12U9Jh.webp",
     "src/content/posts/csgoserver/index.md",
-    "src/content/posts/about-router/index.md",
-    "src/content/posts/homelab-2/index.md",
     "src/content/posts/homelab-1/index.md",
     "src/content/posts/cs2server/index.md",
     "src/content/posts/cloudflarer2alist/index.md",
