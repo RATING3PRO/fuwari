@@ -9,7 +9,7 @@ import { LinkPreset } from "./types/config";
 
 export const siteConfig: SiteConfig = {
 	title: "RATING3PRO Blog",
-	subtitle: "小男娘照片私我",
+	subtitle: "致最好的朋友，我不應忘記他的名字",
 	description:
 		"Homelab玩家, 随便发发",
 	lang: "zh_CN", // Language code, e.g. 'en', 'zh_CN', 'ja', etc.
