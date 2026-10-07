@@ -215,16 +215,15 @@ tmux attach -t cs2
 tmux kill-session -t cs2
 ```
 
-或者使用wrapper脚本控制：[cs2ctl](https://raw.githubusercontent.com/RATING3PRO/csgoctl/refs/heads/main/cs2ctl)
+或者使用wrapper脚本控制：[csctl](https://github.com/RATING3PRO/csctl)
 
 ```bash
-# 新建文件并粘贴脚本
-sudo nano /usr/local/bin/cs2ctl
-# 配置权限
-chmod +x /usr/local/bin/cs2ctl
+curl -fsSL https://raw.githubusercontent.com/RATING3PRO/csctl/main/install.sh | bash -s -- --lang zh
 ```
 
 ```bash
+# 编辑配置文件
+cs2ctl -e
 # 启动服务器
 cs2ctl start
 # 关闭服务器
@@ -235,6 +234,8 @@ cs2ctl restart
 cs2ctl attach
 # 查看会话状态
 cs2ctl status
+# 更新服务器
+cs2ctl update
 ```
 
 # 安装MetaMod和CSSharp

@@ -237,18 +237,15 @@ tmux kill-session -t csgo
 
 再次连接仍然使用`tmux attach -t csgo`
 
-或者使用wrapper脚本控制：
-
-复制[脚本](https://raw.githubusercontent.com/RATING3PRO/csgoctl/refs/heads/main/csgoctl)，在`/usr/local/bin/`新建一个文件并粘贴，然后配置权限：
+或者使用[wrapper脚本](https://github.com/RATING3PRO/csctl)控制：
 
 ```bash
-# 新建文件并粘贴脚本(按需修改脚本中的路径和srcds启动参数)
-sudo nano /usr/local/bin/csgoctl
-# 配置权限
-chmod +x /usr/local/bin/csgoctl
+curl -fsSL https://raw.githubusercontent.com/RATING3PRO/csctl/main/install.sh | bash -s -- --lang zh
 ```
 
 ```bash
+# 编辑配置文件
+csgoctl -e
 # 启动服务器
 csgoctl start
 # 关闭服务器
