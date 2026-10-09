@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/content/posts/csgoserver/index.md",
+                "file": "src/content/posts/cs2server/index.md",
                 "mode": "source",
                 "source": false
               },
@@ -173,6 +173,10 @@
   },
   "active": "107f6ca61ecd845c",
   "lastOpenFiles": [
+    "src/content/posts/tailscale/index.md",
+    "src/content/posts/tailscale/index.png",
+    "src/content/posts/cloudflarer2alist/index.md",
+    "src/content/posts/csgoserver/index.md",
     "src/content/posts/cs2server/index.md",
     "src/content/posts/about-router/index.md",
     "src/content/posts/homelab-2/index.md",
@@ -196,11 +200,7 @@
     "dist/_astro/index-2.1KVzkMO0_ZexxfH.webp",
     "dist/_astro/index-3.BSAAZ3l9_Z1DEBR5.webp",
     "dist/_astro/index.BYFNS4rl_1rTWKX.webp",
-    "dist/_astro/index.BWOBJ3jU_Z12U9Jh.webp",
-    "src/content/posts/csgoserver/index.md",
     "src/content/posts/homelab-1/index.md",
-    "src/content/posts/cloudflarer2alist/index.md",
-    "src/content/posts/tailscale/index.md",
     "src/content/posts/torsocks5/index.md",
     "src/content/posts/homeproxy/index.md",
     "src/content/posts/cloudflaretob2/index.md",

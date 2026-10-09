@@ -5,7 +5,7 @@ tags:
   - Openwrt
   - VPN
 published: 2026-03-19
-draft: false
+draft: true
 image: ./index.png
 description: 简单记录Tailscale局域网路由配置，偏向个人用途，参数仅供参考
 category: VPN

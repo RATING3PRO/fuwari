@@ -6,7 +6,7 @@ tags:
 published: 2025-10-17
 description: 介绍如何将 Cloudflare R2 对象存储桶挂载到 Alist，实现文件的在线浏览、下载与读写操作，适用于自托管与对象存储整合场景。
 title: 将 Cloudflare R2 存储桶挂载到 Alist 实现对象存储读写
-draft: false
+draft: true
 image: ./index.png
 category: Cloudflare
 ---
