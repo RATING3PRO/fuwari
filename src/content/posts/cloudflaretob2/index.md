@@ -6,7 +6,7 @@ tags:
 published: 2026-01-13
 title: 将Backblaze B2对象存储经过Cloudflare CDN下载文件免出口费用
 image: ./index.png
-draft: false
+draft: true
 description: 使用 Backblaze B2 作为对象存储，结合 Cloudflare CDN 与 Worker，实现低成本、高可控、支持大文件与断点续传的下载分发方案
 category: Cloudflare
 ---

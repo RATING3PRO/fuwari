@@ -10,7 +10,7 @@ published: 2025-12-30
 image: ./index.jpg
 description: 记录并介绍我的 Homelab 软硬件架构，包括 OpenWrt、Proxmox VE、ESXi、NAS 与代理相关配置，作为持续更新的家庭实验室实践笔记。
 title: 我的 Homelab 架构记录：OpenWrt / Proxmox VE / ESXi / NAS
-draft: false
+draft: true
 category: Homelab
 ---
 
