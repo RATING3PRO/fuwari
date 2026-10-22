@@ -124,7 +124,7 @@ Applications --> Conferences
 ![](src/content/posts/about-voip/index-2.png)
 ## 邮件配置
 
-如果没有SysAdmin Pro，配置Postfix，下载[python脚本](public/files/configure-postfix-relay.py)(AI写的)，使用root用户运行
+如果没有SysAdmin Pro，配置Postfix，下载[python脚本](https://md.xie.today/configure-postfix-relay.py)(AI写的)，使用root用户运行
 
 # 外线配置
 
