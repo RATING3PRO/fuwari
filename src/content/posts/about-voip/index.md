@@ -204,6 +204,7 @@ Applications --> Conferences
 | Detect Disconnect Tone                                   | yes，检测对方挂断后的忙音                         |
 | Detect PSTN/VoIP Long Silence                            | no，不因模拟/VoIP方长时间无声而挂断                  |
 | Disconnect Tone                                          | `450@-30,450@-30;4(.35/.35/1+2)`中国联通可用 |
+
 Dial Plan8 这里号码不含国家和市区号，需要与FreePBX中路由的DID一致
 
 最后Submit All Changes
