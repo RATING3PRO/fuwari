@@ -154,6 +154,7 @@ Applications --> Conferences
 | DNS                          | 按需填写            |
 | NTP Server                   | 按需填写            |
 | Enable WAN Web Server        | yes             |
+
 最后Submit All Changes
 
 接下来用网线将设备Internet与局域网LAN相连，并将外线插入FXO端口
@@ -167,45 +168,49 @@ Applications --> Conferences
 ![](src/content/posts/about-voip/index-4.png)
 
 
-| 选项                                                       | 内容                                     |
-| -------------------------------------------------------- | -------------------------------------- |
-| Enable                                                   | yes                                    |
-| SIP Transport                                            | SIP传输协议，建议优先选UDP                       |
-| SIP Port                                                 | SIP端口，我这里使用5061                        |
-| Restrict Source IP                                       | 限制来源IP，建议开启                            |
-| Proxy                                                    | 与上一个选项配合使用，填FreePBX的IP+端口              |
-| Register                                                 | no，接下来会在FreePBX中设置中继目标                 |
-| Make/Ans Call Without Reg                                | yes，固定中继目标时不需要，另外上一项已经关闭注册             |
-| Display Name                                             | 自定义                                    |
-| User ID                                                  | 与分机User ID类似，我这里设置为`spa3102`           |
-| Use Auth ID/Auth ID                                      | 取决于需不需要将Auth ID与User ID区分              |
-| Password                                                 | 与FreePBX中继时用的密码                        |
-| Preferred Codec                                          | 音频编码，推荐alaw/ulaw                       |
-| Use Pref Codec Only                                      | no，不强制使用指定编码，可在下方勾选其他备选编码              |
-| Silence Supp Enable                                      | no，静音期间仍发送音频，防止兼容性问题                   |
-| DTMF Tx Method                                           | AVT，将按键与提示作为事件发送，详见`RFC4733`           |
-| Echo Canc Enable/Echo Canc Adapt Enable/Echo Supp Enable | 回声处理相关，建议开启                            |
-| VoIP-To-PSTN Gateway Enable                              | yes，启用VoIP转模拟，整个系统的关键                  |
-| VoIP Caller Auth Method                                  | HTTP Digest，用于和FreePBX之间验证             |
-| VoIP Access List                                         | 填FreePBX地址                             |
-| One Stage Dialing                                        | yes，设备直接拨出对应号码，无需再次输入                  |
-| VoIP Caller Default DP                                   | 1，默认使用Dial Plan 1处理拨出号码                |
-| VoIP User 1 Auth ID                                      | 对应FreePBX中继的认证名                        |
-| VoIP User 1 Password                                     | 对应FreePBX中继的密码                         |
-| VoIP User 1 DP                                           | 认证成功后采用Dial Plan 1                     |
-| Dial Plan 1                                              | `(xx.)`                                |
-| Dial Plan 8                                              | `(S0<:PHONE@FREEPBX-IP:5060>)`         |
-| PSTN Answer Delay                                        | 3，拨入后的等待                               |
-| VoIP Answer Delay                                        | 0，拨出的等待                                |
-| VoIP DLG Refresh Intvl                                   | 30，SIP会话健康检查循环时间                       |
-| Detect CPC                                               | yes，检测短暂的挂断无电流                         |
-| Min CPC Duration                                         | 0.2，无电流至少持续该秒数才判断为CPC                  |
-| Detect Polarity Reversal                                 | no，不使用电话线正负极反转来判断挂断                    |
-| Detect Disconnect Tone                                   | yes，检测对方挂断后的忙音                         |
-| Detect PSTN/VoIP Long Silence                            | no，不因模拟/VoIP方长时间无声而挂断                  |
-| Disconnect Tone                                          | `450@-30,450@-30;4(.35/.35/1+2)`中国联通可用 |
+| 选项                                                       | 内容                                 |
+| -------------------------------------------------------- | ---------------------------------- |
+| Enable                                                   | yes                                |
+| SIP Transport                                            | SIP传输协议，建议优先选UDP                   |
+| SIP Port                                                 | SIP端口，我这里使用5061                    |
+| Restrict Source IP                                       | 限制来源IP，建议开启                        |
+| Proxy                                                    | 与上一个选项配合使用，填FreePBX的IP+端口          |
+| Register                                                 | no，接下来会在FreePBX中设置中继目标             |
+| Make/Ans Call Without Reg                                | yes，固定中继目标时不需要，另外上一项已经关闭注册         |
+| Display Name                                             | 自定义                                |
+| User ID                                                  | 与分机User ID类似，我这里设置为`spa3102`       |
+| Use Auth ID/Auth ID                                      | 取决于需不需要将Auth ID与User ID区分          |
+| Password                                                 | 与FreePBX中继时用的密码                    |
+| Preferred Codec                                          | 音频编码，推荐alaw/ulaw                   |
+| Use Pref Codec Only                                      | no，不强制使用指定编码，可在下方勾选其他备选编码          |
+| Silence Supp Enable                                      | no，静音期间仍发送音频，防止兼容性问题               |
+| DTMF Tx Method                                           | AVT，将按键与提示作为事件发送，详见`RFC4733`       |
+| Echo Canc Enable/Echo Canc Adapt Enable/Echo Supp Enable | 回声处理相关，建议开启                        |
+| VoIP-To-PSTN Gateway Enable                              | yes，启用VoIP转模拟，整个系统的关键              |
+| VoIP Caller Auth Method                                  | HTTP Digest，用于和FreePBX之间验证         |
+| VoIP Access List                                         | 填FreePBX地址                         |
+| One Stage Dialing                                        | yes，设备直接拨出对应号码，无需再次输入              |
+| VoIP Caller Default DP                                   | 1，默认使用Dial Plan 1处理拨出号码            |
+| VoIP User 1 Auth ID                                      | 对应FreePBX中继的认证名                    |
+| VoIP User 1 Password                                     | 对应FreePBX中继的密码                     |
+| VoIP User 1 DP                                           | 认证成功后采用Dial Plan 1                 |
+| Dial Plan 1                                              | `(xx.)`                            |
+| Dial Plan 8                                              | `(S0<:PHONE@FREEPBX-IP:5060>)`     |
+| PSTN Answer Delay                                        | 3，拨入后的等待                           |
+| VoIP Answer Delay                                        | 0，拨出的等待                            |
+| VoIP DLG Refresh Intvl                                   | 30，SIP会话健康检查循环时间                   |
+| Detect CPC                                               | yes，检测短暂的挂断无电流                     |
+| Min CPC Duration                                         | 0.2，无电流至少持续该秒数才判断为CPC              |
+| Detect Polarity Reversal                                 | no，不使用电话线正负极反转来判断挂断                |
+| Detect Disconnect Tone                                   | yes，检测对方挂断后的忙音                     |
+| Detect PSTN/VoIP Long Silence                            | no，不因模拟/VoIP方长时间无声而挂断              |
+| Disconnect Tone                                          | 例如`450@-30,450@-30;4(.35/.35/1+2)` |
 
 Dial Plan8 这里号码不含国家和市区号，需要与FreePBX中路由的DID一致
+
+Disconnect Tone 这里我更换了两个上游设备，并不是一致的，可能需要自己识别一下
+
+`450@-30,450@-30;4(.25/.25/1+2)`
 
 最后Submit All Changes
 
