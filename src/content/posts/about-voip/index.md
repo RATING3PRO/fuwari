@@ -43,28 +43,26 @@ bash /tmp/sng_freepbx_debian_install.sh
 
 ## 配置之前
 
-先进入WebUI做基础的管理员账户创建。如果是私人服务器并且确保安全的情况下，我建议关闭防火墙与fail2ban服务，以免不必要的排错环节：
+先进入WebUI做基础的管理员账户创建。如果是私人服务器并且确保安全的情况下，我建议设置防火墙与fail2ban的对应网段bypass，以免不必要的排错环节：
 
 ```bash
 su -
 
-# 停止自动恢复防火墙任务
-php <<'PHP'
-<?php
-require '/etc/freepbx.conf';
-FreePBX::Firewall()->setConfig('status', false);
-FreePBX::Firewall()->removeCronJob();
-PHP
+# 添加防火墙信任区域
+fwconsole firewall add trusted 100.64.0.0/10 10.0.0.0/8
+fwconsole firewall list trusted
+fwconsole firewall restart
 
-# 停止防火墙
-rm -f /etc/asterisk/firewall.enabled
-fwconsole firewall stop
+# 添加fail2ban bypass
+mkdir -p /etc/fail2ban/jail.d
 
-# 停止防火墙模块
-fwconsole ma disable firewall
+cat > /etc/fail2ban/jail.d/99-local-bypass.local <<'EOF'
+[DEFAULT]
+ignoreip = 127.0.0.1/8 ::1 100.64.0.0/10 10.0.0.0/8
+EOF
 
-# 停止fail2ban
-systemctl disable --now fail2ban.service
+fail2ban-client -t
+fail2ban-client reload
 ```
 
 ## 创建分机
@@ -315,6 +313,8 @@ Submit-->Apply Config
 
 # Cisco电话配置
 
+更建议使用chan-sccp，能获得完整的功能支持且没有sip固件的许多兼容性问题
+
 我购买了两台CP-7945G和一台CP-7841-K9
 
 锁住的配置项通常可使用`**#`解锁
@@ -501,12 +501,23 @@ Submit-->Apply Config
 </device>
 ```
 
-接着创建一份dialplan.xml，我的示例：
+接着创建一份dialplan.xml，用于定义拨号规则，我的示例：
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <DIALTEMPLATE>
-  <TEMPLATE MATCH="*" Timeout="4"/>
+  <!-- 0000-8999直接拨出 -->
+  <TEMPLATE MATCH="0..." Timeout="0" User="Phone"/>
+  <TEMPLATE MATCH="1..." Timeout="0" User="Phone"/>
+  <TEMPLATE MATCH="2..." Timeout="0" User="Phone"/>
+  <TEMPLATE MATCH="3..." Timeout="0" User="Phone"/>
+  <TEMPLATE MATCH="4..." Timeout="0" User="Phone"/>
+  <TEMPLATE MATCH="5..." Timeout="0" User="Phone"/>
+  <TEMPLATE MATCH="6..." Timeout="0" User="Phone"/>
+  <TEMPLATE MATCH="7..." Timeout="0" User="Phone"/>
+  <TEMPLATE MATCH="8..." Timeout="0" User="Phone"/>
+  <!-- 其余等待4秒 -->
+  <TEMPLATE MATCH="*" Timeout="4" User="Phone"/>
 </DIALTEMPLATE>
 ```
 
