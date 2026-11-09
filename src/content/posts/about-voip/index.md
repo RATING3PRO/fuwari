@@ -497,7 +497,7 @@ Submit-->Apply Config
   <!-- 待机页面地址 -->
   <idleURL></idleURL>
   <!-- SIP传输协议，通常: 1-TCP 2-UDP 3-TLS 建议优先UDP-->
-  <transportLayerProtocol>2</transportLayerProtocol>
+  <transportLayerProtocol>1</transportLayerProtocol>
 </device>
 ```
 
@@ -520,11 +520,18 @@ Submit-->Apply Config
 
 ![](src/content/posts/about-voip/index-6.png)
 
-确保设置正确，接下来重置话机
+方法一 重置话机
 
 将设备电源拔出，按住`#`并插上电源，等待两个线路灯循环闪烁琥珀色，依次按下`123456789*0#`，设备启动后将自动下载固件与配置
 
-这里我的第二台无论如何都无法重置，进入 Settings-->Security Configuration-->Trust List-->ITL File-->`**#`-->more-->erase，等待重启后也会拉取固件和配置文件，但这并非完全重置，我并不了解此操作的原理，出处在[how can i Cisco 7945 ip phone Factory Reset By NHSS Global](https://www.youtube.com/watch?v=og-kxt4Wii0)
+方法二 在xml中配置加载固件
+
+在`<loadInformation>`中写对应的文件名称，确保固件和xml在tftp服务器目录下，进入话机Settings-->Network Configuration-->TPTP Server 1，更改为tftp服务器IP。
+回到设置主页，按下`**#**`等待话机重启更新固件
+
+方法三 删除ITL
+
+进入 Settings-->Security Configuration-->Trust List-->ITL File-->`**#`-->more-->erase，等待重启后也会拉取固件和配置文件
 
 
 ## 7841
