@@ -725,8 +725,3 @@ Submit-->Apply Config
   <transportLayerProtocol>2</transportLayerProtocol>
 </device>
 ```
-
-dialplan.xml与上方完全一致
-
-
-
