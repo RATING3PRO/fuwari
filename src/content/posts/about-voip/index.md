@@ -99,21 +99,26 @@ fail2ban-client reload
 
 ## 客户端注册分机
 
-| 选项            | 内容              |
-| ------------- | --------------- |
-| SIP服务器        | FreePBX的IP地址    |
-| 用户名           | 分机号码            |
-| 域名            | FreePBX的IP地址    |
-| 登录名           | 分机号码            |
-| 显示名           | 自定义，例如John      |
-| 密码            | 分机注册密码          |
-| 语音信箱号码        | *97             |
-| 传输协议          | 优先选择UDP，其他可后续开启 |
-| stun/turn/ice | 在局域网或VPN下通常无需开启 |
+| 选项            | 内容                            |
+| ------------- | ----------------------------- |
+| SIP服务器        | FreePBX的IP地址                  |
+| 用户名           | 分机号码                          |
+| 域名            | FreePBX的IP地址                  |
+| 登录名           | 分机号码                          |
+| 显示名           | 自定义，例如John                    |
+| 密码            | 分机注册密码                        |
+| 语音信箱号码        | *97                           |
+| 传输协议          | 优先选择UDP，其他协议可在SIP Settings中开启 |
+| stun/turn/ice | 在局域网或VPN下通常无需开启               |
 
 ## 回音排错
 
 拨打`*43`
+
+## 音频编码配置
+
+进入SIP Settings-->General SIP Settings-->语音编码
+我建议开启ulaw/alaw/g726/opus/g722，并将g722放到首位，opus次之，g726最后
 
 ## 会议室
 
@@ -391,8 +396,8 @@ Submit-->Apply Config
     <autoAnswerOverride>true</autoAnswerOverride>
     <transferOnhookEnabled>false</transferOnhookEnabled>
     <enableVad>false</enableVad>
-    <!-- 首选编码 -->
-    <preferredCodec>g711alaw</preferredCodec>
+    <!-- 首选编码，自动协商填none -->
+    <preferredCodec>none</preferredCodec>
     <!-- DTMF负载类型，与FreePBX一致 -->
     <dtmfAvtPayload>101</dtmfAvtPayload>
     <dtmfDbLevel>3</dtmfDbLevel>
@@ -479,7 +484,8 @@ Submit-->Apply Config
     <videoCapability>0</videoCapability>
     <webAccess>0</webAccess>
     <spanToPCPort>0</spanToPCPort>
-    <g722CodecSupport>1</g722CodecSupport>
+    <!-- g722支持，2为开启 -->
+    <g722CodecSupport>2</g722CodecSupport>
   </vendorConfig>
   <!-- 配置版本标识 -->
   <versionStamp>00000000-0000-0000-0000-000000000000</versionStamp>
@@ -616,8 +622,8 @@ Submit-->Apply Config
     <autoAnswerOverride>true</autoAnswerOverride>
     <transferOnhookEnabled>false</transferOnhookEnabled>
     <enableVad>false</enableVad>
-    <!-- 首选编码 -->
-    <preferredCodec>g711alaw</preferredCodec>
+    <!-- 首选编码，自动协商填none -->
+    <preferredCodec>none</preferredCodec>
     <!-- DTMF负载类型，与FreePBX一致 -->
     <dtmfAvtPayload>101</dtmfAvtPayload>
     <dtmfDbLevel>3</dtmfDbLevel>
@@ -704,6 +710,7 @@ Submit-->Apply Config
     <videoCapability>0</videoCapability>
     <webAccess>0</webAccess>
     <spanToPCPort>0</spanToPCPort>
+    <!-- g722支持，2为开启 -->
     <g722CodecSupport>1</g722CodecSupport>
   </vendorConfig>
   <!-- 配置版本标识 -->
